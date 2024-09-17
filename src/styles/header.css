@@ -49,14 +49,20 @@
   height: 20px;
   object-fit: cover;
 }
+
 /* ============ header middle style =========== */
 .header__middle {
-  background-color: #1e276de8; /* Burada #yourColorCode yerine istediğiniz rengi kullanın */
+  background-color: #1e276de8;
+  /* Burada #yourColorCode yerine istediğiniz rengi kullanın */
 }
+
 .custom-logo {
-  max-width: 100%; /* Resmin genişliği, kapsayıcı genişliğini geçmemesi için */
-  height: auto; /* Yükseklik oranını korur */
+  max-width: 100%;
+  /* Resmin genişliği, kapsayıcı genişliğini geçmemesi için */
+  height: auto;
+  /* Yükseklik oranını korur */
 }
+
 /* ================ main navbar styles =========== */
 
 .main__navbar {
@@ -110,6 +116,7 @@
 .search__box input::placeholder {
   font-size: 0.8rem;
 }
+
 .search__box span i {
   color: rgba(255, 255, 255, 0.555);
   cursor: pointer;
@@ -119,7 +126,8 @@
   color: #f9a826;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
+
   .header__top,
   .header__middle,
   .nav__right {
@@ -161,4 +169,41 @@
   .menu__active {
     display: block;
   }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .search__box {
+    border: 1px solid #7c8a972f;
+    padding: 7px 8px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    background: #020a4de9;
+    right: 20px;
+    /* Sağdan uzaklığı ayarlıyoruz */
+    position: fixed;
+    /* Sabitliyoruz */
+    top: 157px;
+    /* Üstten uzaklık (isteğe bağlı ayarlanabilir) */
+  }
+
+  .search__box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .search__box input::placeholder {
+    font-size: 0.8rem;
+  }
+
+  .search__box span i {
+    color: rgba(255, 255, 255, 0.555);
+    cursor: pointer;
+  }
+
+
+
 }
