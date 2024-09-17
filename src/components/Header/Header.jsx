@@ -72,8 +72,14 @@ const Header = () => {
       <div className="header__top">
         <Container>
           <Row>
-            <Col lg="6" md="6" sm="6">
+            <Col lg="8" md="8" sm="8">
               <div className="header__top__left">
+                <Link
+                  to="/home"
+                  className="header__top__help"
+                >
+                  <img src={image} alt="İnoksist" className="header__top__logo" />
+                </Link>
                 <span className="header__top__help">
                   <i class="ri-mail-fill"></i> info@inoksist.com.tr
                 </span>
@@ -83,7 +89,7 @@ const Header = () => {
               </div>
             </Col>
 
-            <Col lg="6" md="6" sm="6">
+            <Col lg="4" md="4" sm="4">
               <div className="header__top__right d-flex align-items-center justify-content-end gap-4">
                 {socialLinks.map((item, index) => (
                   <Link
@@ -109,24 +115,6 @@ const Header = () => {
                     />
                   )}
                 </button>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-
-      {/* =============== header middle =========== */}
-      <div className="header__middle">
-        <Container fluid>
-          <Row>
-            <Col>
-              <div className="logo">
-                <Link
-                  to="/home"
-                  className="d-flex align-items-center justify-content-center gap-2"
-                >
-                  <img src={image} alt="İnoksist" className="custom-logo" />
-                </Link>
               </div>
             </Col>
           </Row>

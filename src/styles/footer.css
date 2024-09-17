@@ -1,16 +1,19 @@
 .footer {
-  background: #000d6b;
+  background: #000845;
   padding-top: 50px;
   padding-bottom: 15px;
 }
 
 .custom-logo {
-  max-width: 95%; /* Resmin genişliği, kapsayıcı genişliğini geçmemesi için */
-  height: auto; /* Yükseklik oranını korur */
+  max-width: 95%;
+  /* Resmin genişliği, kapsayıcı genişliğini geçmemesi için */
+  height: auto;
+  /* Yükseklik oranını korur */
 }
 
 .footer__logo {
-  margin-right: 50px; /* Sağdan boşluk bırakır */
+  margin-right: 50px;
+  /* Sağdan boşluk bırakır */
 }
 
 .footer__logo i {
@@ -31,7 +34,8 @@
   line-height: 30px;
   text-align: left;
   position: relative;
-  width: fit-content; /* Kapsayıcı genişliğini içeriğe göre ayarlar */
+  width: fit-content;
+  /* Kapsayıcı genişliğini içeriğe göre ayarlar */
 }
 
 .quick__link {
@@ -66,7 +70,7 @@
   padding: 8px 12px;
   border: 1px solid #7c8a972f;
   border-radius: 50px;
-  background: #020a4de9;
+  background: #06138b77;
 }
 
 .newsletter input {

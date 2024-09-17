@@ -1,13 +1,18 @@
 .header__top {
   padding: 10px 0px;
-  background: #000d6b;
+  background: #273286;
   color: #fff;
+}
+
+.header .header__top__logo {
+  max-width: 140px;
+  height: auto;
 }
 
 .header__top__left {
   display: flex;
   align-items: center;
-  column-gap: 1rem;
+  column-gap: 1.4rem;
 }
 
 .header__top__left span {
@@ -50,24 +55,11 @@
   object-fit: cover;
 }
 
-/* ============ header middle style =========== */
-.header__middle {
-  background-color: #1e276de8;
-  /* Burada #yourColorCode yerine istediğiniz rengi kullanın */
-}
-
-.custom-logo {
-  max-width: 100%;
-  /* Resmin genişliği, kapsayıcı genişliğini geçmemesi için */
-  height: auto;
-  /* Yükseklik oranını korur */
-}
-
 /* ================ main navbar styles =========== */
 
 .main__navbar {
   padding: 15px 0px;
-  background: #000d6b;
+  background: #273286;
 }
 
 .mobile__menu i {
@@ -128,10 +120,12 @@
 }
 
 .nav__right {
-  margin-left: auto; /* Sağda kalmasını sağlar */
+  margin-left: auto;
+  /* Sağda kalmasını sağlar */
 }
 
 @media only screen and (max-width: 1024px) {
+
   .header__top,
   .header__middle,
   .nav__right {
@@ -177,13 +171,14 @@
 
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
   .nav__item {
-    font-size: 0.75rem; /* Bu aralık için font boyutu */
+    font-size: 0.7rem;
+    /* Bu aralık için font boyutu */
   }
 
   .menu {
     display: flex;
     align-items: center;
-    column-gap: 1.4rem;
+    column-gap: 1.5rem;
   }
 
   .search__box {
@@ -195,13 +190,16 @@
   }
 
   .search__box input {
-    font-size: 0.8rem; /* Font boyutunu küçült */
-    padding: 0; /* İç paddingi sıfırla */
+    font-size: 0.8rem;
+    /* Font boyutunu küçült */
+    padding: 0;
+    /* İç paddingi sıfırla */
   }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
   .nav__item {
-    font-size: 0.8rem; /* Bu aralık için font boyutu */
+    font-size: 0.8rem;
+    /* Bu aralık için font boyutu */
   }
 }

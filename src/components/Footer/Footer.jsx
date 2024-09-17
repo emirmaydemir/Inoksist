@@ -59,7 +59,7 @@ const Footer = () => {
 
           <Col lg="2" md="6" sm="6">
             <div className="mb-4">
-              <h5 className="footer__link-title">Kategoriler</h5>
+              <h5 className="footer__link-title">KATEGORİLER</h5>
               <ListGroup>
                 {quickLinks.map((item, index) => (
                   <ListGroupItem key={index} className="p-0 mt-3 quick__link">
@@ -72,7 +72,7 @@ const Footer = () => {
 
           <Col lg="3" md="6" sm="6">
             <div className="mb-4">
-              <h5 className="footer__link-title mb-4">İletişim Bilgileri</h5>
+              <h5 className="footer__link-title mb-4">İLETİŞİM BİLGİLERİ</h5>
               <p className="office__info">
                 Adres: İ.O.S.B. Aykosan San. Sit. 4'lü B Blok No: 55
                 Başakşehir/İSTANBUL
@@ -87,7 +87,7 @@ const Footer = () => {
 
           <Col lg="3" md="12" sm="12">
             <div className="mb-4">
-              <h5 className="footer__link-title">Bize Ulaşın</h5>
+              <h5 className="footer__link-title">BİZE ULAŞIN</h5>
               <p className="section__description">Bizimle İletişime Geçin</p>
               <div className="newsletter">
                 <input type="email" placeholder="Email" />
