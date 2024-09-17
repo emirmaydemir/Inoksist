@@ -87,6 +87,7 @@
 }
 
 .nav__item {
+  font-size: 1rem;
   color: #fff;
   text-decoration: none;
   transition: 0.3s;
@@ -98,7 +99,7 @@
 
 .search__box {
   border: 1px solid #7c8a972f;
-  padding: 7px 12px;
+  padding: 7px 10px;
   display: flex;
   align-items: center;
   border-radius: 50px;
@@ -126,8 +127,11 @@
   color: #f9a826;
 }
 
-@media only screen and (max-width: 1024px) {
+.nav__right {
+  margin-left: auto; /* Sağda kalmasını sağlar */
+}
 
+@media only screen and (max-width: 1024px) {
   .header__top,
   .header__middle,
   .nav__right {
@@ -172,38 +176,32 @@
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
-  .search__box {
-    border: 1px solid #7c8a972f;
-    padding: 7px 8px;
+  .nav__item {
+    font-size: 0.7rem; /* Bu aralık için font boyutu */
+  }
+
+  .menu {
     display: flex;
     align-items: center;
-    border-radius: 50px;
+    column-gap: 1.5rem;
+  }
+
+  .search__box {
+    border: 1px solid #7c8a972f;
+    padding: 5px 8px;
+    align-items: center;
+    border-radius: 40px;
     background: #020a4de9;
-    right: 20px;
-    /* Sağdan uzaklığı ayarlıyoruz */
-    position: fixed;
-    /* Sabitliyoruz */
-    top: 157px;
-    /* Üstten uzaklık (isteğe bağlı ayarlanabilir) */
   }
 
   .search__box input {
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #fff;
-    cursor: pointer;
+    font-size: 0.8rem; /* Font boyutunu küçült */
+    padding: 0; /* İç paddingi sıfırla */
   }
+}
 
-  .search__box input::placeholder {
-    font-size: 0.8rem;
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .nav__item {
+    font-size: 0.8rem; /* Bu aralık için font boyutu */
   }
-
-  .search__box span i {
-    color: rgba(255, 255, 255, 0.555);
-    cursor: pointer;
-  }
-
-
-
 }
