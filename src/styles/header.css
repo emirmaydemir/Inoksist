@@ -177,13 +177,13 @@
 
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
   .nav__item {
-    font-size: 0.7rem; /* Bu aralık için font boyutu */
+    font-size: 0.75rem; /* Bu aralık için font boyutu */
   }
 
   .menu {
     display: flex;
     align-items: center;
-    column-gap: 1.5rem;
+    column-gap: 1.4rem;
   }
 
   .search__box {
