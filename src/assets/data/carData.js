@@ -19,7 +19,7 @@ const carData = [
     price: 50,
     speed: "20kmpl",
     gps: "GPS Navigation",
-    seatType: "Heated seats",
+    seatType: "Teknik Hırdavat",
     automatic: "Automatic",
     description:
       " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
