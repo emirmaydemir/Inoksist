@@ -19,7 +19,7 @@ const navLinks = [
   },
 
   {
-    path: "/cars",
+    path: "/cars2",
     display: "Teknik Hırdavat",
   },
   {
