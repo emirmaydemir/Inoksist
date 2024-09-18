@@ -34,7 +34,6 @@ const WaterTankListing = () => {
 
                 <select onChange={handleCategoryChange}>
                   <option value="">Tüm Kategoriler</option>
-                  {/* x.js'den gelen kategorileri render et */}
                   {categoriesData.map((category) => (
                     <option value={category.id} key={category.id}>
                       {category.description}

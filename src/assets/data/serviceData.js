@@ -24,7 +24,7 @@ const serviceData = [
     id: 4,
     title: "Modüler Su Deposu",
     icon: "ri-water-flash-line",
-    desc: "Modüler su deposu, farklı su ihtiyaçlarına yönelik esnek ve ölçeklenebilir çözümler sunar. Bu sistemler, suyun etkin bir şekilde depolanmasını ve yönetilmesini sağlayarak, çeşitli uygulamalar için kolaylık ve verimlilik sağlar.",
+    desc: "Modüler su deposu, farklı su ihtiyaçlarına yönelik esnek ve ölçeklenebilir çözümler sunar. Bu sistemler, suyun etkin bir şekilde depolanmasını ve yönetilmesini sağlayarak, çeşitli uygulamalar için verimlilik sağlar.",
   },
 ];
 

@@ -3,7 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import CarItem from "../components/UI/CarItem";
-import carData from "../assets/data/fastenerData";
+import fastenerData from "../assets/data/fastenerData";
 import { FastenerData } from "../assets/data/categoriesData";
 
 const FastenerListing = () => {
@@ -16,8 +16,10 @@ const FastenerListing = () => {
   };
 
   const filteredCars = selectedCategory
-    ? carData.filter((car) => car.categoryId === parseInt(selectedCategory))
-    : carData;
+    ? fastenerData.filter(
+        (car) => car.categoryId === parseInt(selectedCategory)
+      )
+    : fastenerData;
 
   return (
     <Helmet title="Cars">
@@ -28,7 +30,7 @@ const FastenerListing = () => {
           <Row>
             <Col lg="12">
               <div className=" d-flex align-items-center gap-3 mb-5">
-               {/*} <span className=" d-flex align-items-center gap-2">
+                {/*} <span className=" d-flex align-items-center gap-2">
                   <i class="ri-sort-asc"></i> Kategoriler
                 </span>*/}
 
@@ -44,7 +46,6 @@ const FastenerListing = () => {
                   aria-label="Kategoriler"
                 >
                   <option value="">Tüm Kategoriler</option>
-                  {/* x.js'den gelen kategorileri render et */}
                   {FastenerData.map((category) => (
                     <option value={category.id} key={category.id}>
                       {category.description}

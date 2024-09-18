@@ -8,7 +8,7 @@ import "../styles/car-details.css"; // Özel stilleri eklemek için bir CSS dosy
 const CarDetails = () => {
   const { slug } = useParams();
 
-  const singleCarItem = fastenerData.find((item) => item.carName === slug);
+  const singleCarItem = fastenerData.find((item) => item.name === slug);
 
   const [mainImage, setMainImage] = useState(singleCarItem.images[0]);
 
@@ -21,7 +21,7 @@ const CarDetails = () => {
   };
 
   return (
-    <Helmet title={singleCarItem.carName}>
+    <Helmet title={singleCarItem.name}>
       <section>
         <Container>
           <Row>
@@ -48,7 +48,7 @@ const CarDetails = () => {
 
             <Col lg="6">
               <div className="car__info">
-                <h2 className="section__title">{singleCarItem.carName}</h2>
+                <h2 className="section__title">{singleCarItem.name}</h2>
                 <p className="section__description">
                   {singleCarItem.description}
                 </p>
