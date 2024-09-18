@@ -74,11 +74,12 @@ const Header = () => {
           <Row>
             <Col lg="8" md="8" sm="8">
               <div className="header__top__left">
-                <Link
-                  to="/home"
-                  className="header__top__help"
-                >
-                  <img src={image} alt="İnoksist" className="header__top__logo" />
+                <Link to="/home" className="header__top__help">
+                  <img
+                    src={image}
+                    alt="İnoksist"
+                    className="header__top__logo"
+                  />
                 </Link>
                 <span className="header__top__help">
                   <i class="ri-mail-fill"></i> info@inoksist.com.tr
@@ -148,7 +149,7 @@ const Header = () => {
 
             <div className="nav__right">
               <div className="search__box">
-                <input type="text" placeholder="Search" />
+                <input type="text" placeholder="Arama" />
                 <span>
                   <i class="ri-search-line"></i>
                 </span>

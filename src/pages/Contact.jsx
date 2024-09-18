@@ -46,6 +46,14 @@ const Contact = () => {
                   <textarea
                     rows="5"
                     placeholder="Mesaj"
+                    style={{
+                      width: "100%",
+                      minHeight: "150px",
+                      padding: "10px",
+                      border: "1px solid #ccc",
+                      borderRadius: "4px",
+                      resize: "vertical",
+                    }}
                     className="textarea"
                   ></textarea>
                 </FormGroup>
