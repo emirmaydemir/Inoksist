@@ -9,6 +9,8 @@ import NotFound from "../pages/NotFound";
 import Contact from "../pages/Contact";
 import FastenerListing from "../pages/FastenerListing";
 import HardwareListing from "../pages/HardwareListing";
+import WaterTankListing from "../pages/WaterTankListing";
+import ChemicalsListing from "../pages/ChemicalsListing";
 
 const Routers = () => {
   return (
@@ -18,7 +20,9 @@ const Routers = () => {
       <Route path="/about" element={<About />} />
       <Route path="/cars" element={<FastenerListing />} />
       <Route path="/cars2" element={<HardwareListing />} />
-      <Route path="/cars/:slug" element={<CarDetails />} />
+      <Route path="/cars3" element={<ChemicalsListing />} />
+      <Route path="/cars4" element={<WaterTankListing />} />
+      <Route path="/cars/:category/:slug" element={<CarDetails />} />
       <Route path="/blogs" element={<Blog />} />
       <Route path="/blogs/:slug" element={<BlogDetails />} />
       <Route path="/contact" element={<Contact />} />

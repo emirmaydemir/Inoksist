@@ -5,6 +5,7 @@ import CommonSection from "../components/UI/CommonSection";
 import CarItem from "../components/UI/CarItem";
 import fastenerData from "../assets/data/fastenerData";
 import { FastenerData } from "../assets/data/categoriesData";
+import "../styles/select.css";
 
 const FastenerListing = () => {
   // Kategorini Seç
@@ -31,18 +32,12 @@ const FastenerListing = () => {
             <Col lg="12">
               <div className=" d-flex align-items-center gap-3 mb-5">
                 {/*} <span className=" d-flex align-items-center gap-2">
-                  <i class="ri-sort-asc"></i> Kategoriler
+                  <i className="ri-sort-asc"></i> Kategoriler
                 </span>*/}
 
                 <select
                   onChange={handleCategoryChange}
-                  style={{
-                    padding: "8px 10px",
-                    borderRadius: "5px",
-                    border: "2px solid #ccc",
-                    backgroundColor: "#f8f9fa",
-                    width: "100%",
-                  }}
+                  className="custom-select"
                   aria-label="Kategoriler"
                 >
                   <option value="">Tüm Kategoriler</option>

@@ -23,11 +23,11 @@ const navLinks = [
     display: "Teknik Hırdavat",
   },
   {
-    path: "/cars",
+    path: "/cars3",
     display: "Bakım Kimyasalları",
   },
   {
-    path: "/cars",
+    path: "/cars4",
     display: "Modüler Su Deposu",
   },
   {
@@ -82,10 +82,10 @@ const Header = () => {
                   />
                 </Link>
                 <span className="header__top__help">
-                  <i class="ri-mail-fill"></i> info@inoksist.com.tr
+                  <i className="ri-mail-fill"></i> info@inoksist.com.tr
                 </span>
                 <span className="header__top__help">
-                  <i class="ri-phone-fill"></i> +90 (212) 549 70 55
+                  <i className="ri-phone-fill"></i> +90 (212) 549 70 55
                 </span>
               </div>
             </Col>
@@ -128,7 +128,7 @@ const Header = () => {
         <Container>
           <div className="navigation__wrapper d-flex align-items-center justify-content-between">
             <span className="mobile__menu">
-              <i class="ri-menu-line" onClick={toggleMenu}></i>
+              <i className="ri-menu-line" onClick={toggleMenu}></i>
             </span>
 
             <div className="navigation" ref={menuRef} onClick={toggleMenu}>
@@ -151,7 +151,7 @@ const Header = () => {
               <div className="search__box">
                 <input type="text" placeholder="Arama" />
                 <span>
-                  <i class="ri-search-line"></i>
+                  <i className="ri-search-line"></i>
                 </span>
               </div>
             </div>

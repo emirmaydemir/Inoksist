@@ -1,14 +1,34 @@
 import React, { useState, useEffect } from "react";
 import fastenerData from "../assets/data/fastenerData";
+import hardwareData from "../assets/data/hardwareData";
+import chemicalData from "../assets/data/chemicalData";
+import waterData from "../assets/data/waterData";
 import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import { useParams } from "react-router-dom";
 import "../styles/car-details.css"; // Özel stilleri eklemek için bir CSS dosyası
 
 const CarDetails = () => {
-  const { slug } = useParams();
+  const { category, slug } = useParams();
 
-  const singleCarItem = fastenerData.find((item) => item.name === slug);
+  const getDataByCategory = (category) => {
+    switch (category) {
+      case "fastenerData":
+        return fastenerData;
+      case "hardwareData":
+        return hardwareData;
+      case "chemicalData":
+        return chemicalData;
+      case "waterData":
+        return waterData;
+      default:
+        return [];
+    }
+  };
+
+  const data = getDataByCategory(category);
+
+  const singleCarItem = data.find((item) => item.name === slug);
 
   const [mainImage, setMainImage] = useState(singleCarItem.images[0]);
 

@@ -1,3 +1,37 @@
+/* Slider Item Styling */
+.product-slide {
+  border-radius: 8px; /* Köşeleri yuvarlatma */
+  text-align: center; /* Metinleri ortalama */
+  background-color: #fff; /* Arka plan rengi */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Kart içindeki öğeleri ortalama */
+}
+
+.product-image {
+  display: flex;
+  justify-content: center; /* Resmi yatayda ortalama */
+  align-items: center; /* Resmi dikeyde ortalama */
+  width: 100%; /* Genişliği tam olarak kullan */
+}
+
+.product-image img {
+  max-width: 100%; /* Görüntüyü konteyner genişliğine uydurma */
+  height: auto; /* Yüksekliği otomatik olarak ayarla */
+  border-radius: 8px; /* Görüntü köşelerini yuvarlatma */
+}
+
+.product-title {
+  font-size: 18px; /* Başlık boyutu */
+  font-weight: bold; /* Başlık kalınlığı */
+  color: #333; /* Başlık rengi */
+}
+
+.product-description {
+  font-size: 14px; /* Açıklama boyutu */
+  color: #666; /* Açıklama rengi */
+}
+
 @media only screen and (max-width: 768px) {
   .testimonial p {
     font-size: 0.8rem;

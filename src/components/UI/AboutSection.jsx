@@ -36,23 +36,24 @@ const AboutSection = ({ aboutClass }) => {
 
               <div className="about__section-item d-flex align-items-center">
                 <p className="section__description d-flex align-items-center gap-2">
-                  <i class="ri-checkbox-circle-line"></i> Yüksek Kalite
+                  <i className="ri-checkbox-circle-line"></i> Yüksek Kalite
                   Standartları
                 </p>
 
                 <p className="section__description d-flex align-items-center gap-2">
-                  <i class="ri-checkbox-circle-line"></i> Geniş Ürün Yelpazesi
+                  <i className="ri-checkbox-circle-line"></i> Geniş Ürün
+                  Yelpazesi
                 </p>
               </div>
 
               <div className="about__section-item d-flex align-items-center">
                 <p className="section__description d-flex align-items-center gap-2">
-                  <i class="ri-checkbox-circle-line"></i> Müşteri Odaklı
+                  <i className="ri-checkbox-circle-line"></i> Müşteri Odaklı
                   Hizmet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </p>
 
                 <p className="section__description d-flex align-items-center gap-2">
-                  <i class="ri-checkbox-circle-line"></i> Hızlı ve Güvenilir
+                  <i className="ri-checkbox-circle-line"></i> Hızlı ve Güvenilir
                   Teslimat
                 </p>
               </div>

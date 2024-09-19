@@ -8,7 +8,7 @@ import ava03 from "../../assets/all-images/ava-3.jpg";
 
 const OUR__MEMBERS = [
   {
-    name: "Jhon Doe",
+    name: "Emir Aydemir",
     experience: "Makine Mühendisi (+90)  532 123 45 67",
     fbUrl: "#",
     instUrl: "#",
@@ -18,8 +18,8 @@ const OUR__MEMBERS = [
   },
 
   {
-    name: "David Lisa",
-    experience: "Malzeme Mühendisi (+90) 532 234 56 78",
+    name: "Edanur Yıldırım",
+    experience: "Malzeme Mühend (+90) 532 234 56 78",
     fbUrl: "#",
     instUrl: "#",
     twitUrl: "#",
@@ -28,7 +28,7 @@ const OUR__MEMBERS = [
   },
 
   {
-    name: "Hilton King",
+    name: "Burak Bulut",
     experience: "Kalite Kontrol Uzmanı (+90) 532 345 67 89",
     fbUrl: "#",
     instUrl: "#",
@@ -38,7 +38,7 @@ const OUR__MEMBERS = [
   },
 
   {
-    name: "Jhon Doe",
+    name: "Burak Bulut",
     experience: "Üretim Müdürü (+90) 532 456 78 90",
     fbUrl: "#",
     instUrl: "#",
@@ -59,18 +59,18 @@ const OurMembers = () => {
 
               <div className="single__member-social">
                 <Link to={item.fbUrl}>
-                  <i class="ri-facebook-line"></i>
+                  <i className="ri-facebook-line"></i>
                 </Link>
                 <Link to={item.twitUrl}>
-                  <i class="ri-twitter-line"></i>
+                  <i className="ri-twitter-line"></i>
                 </Link>
 
                 <Link to={item.linkedinUrl}>
-                  <i class="ri-linkedin-line"></i>
+                  <i className="ri-linkedin-line"></i>
                 </Link>
 
                 <Link to={item.instUrl}>
-                  <i class="ri-instagram-line"></i>
+                  <i className="ri-instagram-line"></i>
                 </Link>
               </div>
             </div>

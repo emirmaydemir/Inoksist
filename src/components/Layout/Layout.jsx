@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-
+import Whatsapp from "../UI/WhatsappButton";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Routers from "../../routers/Routers";
@@ -11,6 +11,7 @@ const Layout = () => {
       <div>
         <Routers />
       </div>
+      <Whatsapp />
       <Footer />
     </Fragment>
   );

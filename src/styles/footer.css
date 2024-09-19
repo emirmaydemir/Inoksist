@@ -35,6 +35,7 @@
   text-align: left;
   position: relative;
   width: fit-content;
+  font-size: 17px;
   /* Kapsayıcı genişliğini içeriğe göre ayarlar */
 }
 
@@ -88,6 +89,17 @@
   border-top: 1px solid #7c8a972f;
 }
 
+.social-icons a {
+  margin-right: 28px;
+  font-size: 20px;
+  color: #dddada; /* İkon rengini ayarla */
+  text-decoration: none; /* Alt çizgiyi kaldır */
+}
+
+.social-icons a:hover {
+  color: #f1ee32; /* Hover durumunda ikon rengini değiştir */
+}
+
 @media only screen and (max-width: 768px) {
   .footer__logo-content {
     font-size: 0.8rem;
@@ -101,7 +113,7 @@
 
   .footer__link-title {
     font-size: 1rem;
-    margin-top: 15px;
+    margin-top: 18px;
   }
 
   .footer__bottom p {

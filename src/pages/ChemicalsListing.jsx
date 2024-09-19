@@ -3,8 +3,9 @@ import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import CarItem from "../components/UI/CarItem";
-import carData from "../assets/data/fastenerData";
-import categoriesData from "../assets/data/categoriesData";
+import chemicalData from "../assets/data/chemicalData";
+import { ChemicalData } from "../assets/data/categoriesData";
+import "../styles/select.css";
 
 const ChemicalsListing = () => {
   // Kategorini Seç
@@ -16,25 +17,31 @@ const ChemicalsListing = () => {
   };
 
   const filteredCars = selectedCategory
-    ? carData.filter((car) => car.id === parseInt(selectedCategory))
-    : carData;
+    ? chemicalData.filter(
+        (car) => car.categoryId === parseInt(selectedCategory)
+      )
+    : chemicalData;
 
   return (
-    <Helmet title="Cars">
-      <CommonSection title="Car Listing" />
+    <Helmet title="Cars3">
+      <CommonSection title="Bakım Kimyasalları" />
 
       <section>
         <Container>
           <Row>
             <Col lg="12">
               <div className=" d-flex align-items-center gap-3 mb-5">
-                <span className=" d-flex align-items-center gap-2">
-                  <i class="ri-sort-asc"></i> Kategoriler
-                </span>
+                {/*} <span className=" d-flex align-items-center gap-2">
+                  <i className="ri-sort-asc"></i> Kategoriler
+                </span>*/}
 
-                <select onChange={handleCategoryChange}>
+                <select
+                  onChange={handleCategoryChange}
+                  className="custom-select"
+                  aria-label="Kategoriler"
+                >
                   <option value="">Tüm Kategoriler</option>
-                  {categoriesData.map((category) => (
+                  {ChemicalData.map((category) => (
                     <option value={category.id} key={category.id}>
                       {category.description}
                     </option>

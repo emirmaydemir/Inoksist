@@ -3,10 +3,10 @@ import Slider from "react-slick";
 
 import "../../styles/testimonial.css";
 
-import ava01 from "../../assets/all-images/ava-1.jpg";
-import ava02 from "../../assets/all-images/ava-2.jpg";
-import ava03 from "../../assets/all-images/ava-3.jpg";
-import ava04 from "../../assets/all-images/ava-4.jpg";
+import productImage1 from "../../assets/all-images/Fastener/1.jpg";
+import productImage2 from "../../assets/all-images/Fastener/2.jpg";
+import productImage3 from "../../assets/all-images/Fastener/11.jpg";
+import productImage4 from "../../assets/all-images/Fastener/7.jpg";
 
 const Testimonial = () => {
   const settings = {
@@ -40,76 +40,48 @@ const Testimonial = () => {
 
   return (
     <Slider {...settings}>
-      <div className="testimonial py-4 px-3">
-        <p className="section__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
-          explicabo molestias recusandae repudiandae, dolor, sapiente placeat
-          ab, animi eum minima nulla facere aliquam aut vitae quo pariatur
-          voluptate odit?
-        </p>
-
-        <div className="mt-3 d-flex align-items-center gap-4">
-          <img src={ava01} alt="" className="w-25 h-25 rounded-2" />
-
-          <div>
-            <h6 className="mb-0 mt-3">Jhon Doe</h6>
-            <p className="section__description">Customer</p>
-          </div>
+      <div className="product-slide py-4 px-3">
+        <div className="product-image mb-3">
+          <img src={productImage1} alt="Product 1" className="img-fluid" />
         </div>
+        <h5 className="product-title mb-2">DIN 933 Altı Köşe Cıvata A2</h5>
+        <p className="product-description">
+          Kısa açıklama metni buraya gelecek. Ürünün en önemli özelliklerini
+          özetleyeceğiz.
+        </p>
       </div>
 
-      <div className="testimonial py-4 px-3">
-        <p className="section__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
-          explicabo molestias recusandae repudiandae, dolor, sapiente placeat
-          ab, animi eum minima nulla facere aliquam aut vitae quo pariatur
-          voluptate odit?
-        </p>
-
-        <div className="mt-3 d-flex align-items-center gap-4">
-          <img src={ava02} alt="" className="w-25 h-25 rounded-2" />
-
-          <div>
-            <h6 className="mb-0 mt-3">Jhon Doe</h6>
-            <p className="section__description">Customer</p>
-          </div>
+      <div className="product-slide py-4 px-3">
+        <div className="product-image mb-3">
+          <img src={productImage2} alt="Product 2" className="img-fluid" />
         </div>
+        <h5 className="product-title mb-2">DIN/ISO 7380 Bombe Başlı İmb. A2</h5>
+        <p className="product-description">
+          Kısa açıklama metni buraya gelecek. Ürünün en önemli özelliklerini
+          özetleyeceğiz.
+        </p>
       </div>
 
-      <div className="testimonial py-4 px-3">
-        <p className="section__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
-          explicabo molestias recusandae repudiandae, dolor, sapiente placeat
-          ab, animi eum minima nulla facere aliquam aut vitae quo pariatur
-          voluptate odit?
-        </p>
-
-        <div className="mt-3 d-flex align-items-center gap-4">
-          <img src={ava03} alt="" className="w-25 h-25 rounded-2" />
-
-          <div>
-            <h6 className="mb-0 mt-3">Jhon Doe</h6>
-            <p className="section__description">Customer</p>
-          </div>
+      <div className="product-slide py-4 px-3">
+        <div className="product-image mb-3">
+          <img src={productImage3} alt="Product 3" className="img-fluid" />
         </div>
+        <h5 className="product-title mb-2">DIN 916 Setiskur Cıvata A2</h5>
+        <p className="product-description">
+          Kısa açıklama metni buraya gelecek. Ürünün en önemli özelliklerini
+          özetleyeceğiz.
+        </p>
       </div>
 
-      <div className="testimonial py-4 px-3">
-        <p className="section__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
-          explicabo molestias recusandae repudiandae, dolor, sapiente placeat
-          ab, animi eum minima nulla facere aliquam aut vitae quo pariatur
-          voluptate odit?
-        </p>
-
-        <div className="mt-3 d-flex align-items-center gap-4">
-          <img src={ava04} alt="" className="w-25 h-25 rounded-2" />
-
-          <div>
-            <h6 className="mb-0 mt-3">Jhon Doe</h6>
-            <p className="section__description">Customer</p>
-          </div>
+      <div className="product-slide py-4 px-3">
+        <div className="product-image mb-3">
+          <img src={productImage4} alt="Product 4" className="img-fluid" />
         </div>
+        <h5 className="product-title mb-2">DIN 976 Gijon A2</h5>
+        <p className="product-description">
+          Kısa açıklama metni buraya gelecek. Ürünün en önemli özelliklerini
+          özetleyeceğiz.
+        </p>
       </div>
     </Slider>
   );

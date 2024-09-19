@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import "../../styles/car-item.css";
 
 const CarItem = (props) => {
-  const { imgUrl, name } = props.item;
+  const { imgUrl, name, category } = props.item;
 
   return (
     <Col lg="4" md="4" sm="6" className="mb-5">
       <div className="car__item">
         <div className="car__img">
-          <Link to={`/cars/${name}`}>
+          <Link to={`/cars/${category}/${name}`}>
             <img src={imgUrl} alt="" className="w-100" />
           </Link>
         </div>

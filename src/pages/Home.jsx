@@ -71,25 +71,11 @@ const Home = () => {
         <Container>
           <Row>
             <Col lg="12" className="mb-4 text-center">
-              <h6 className="section__subtitle">Our clients says</h6>
-              <h2 className="section__title">Testimonials</h2>
+              <h6 className="section__subtitle">Öne Çıkan Ürünler</h6>
+              <h2 className="section__title">Trend Ürünler</h2>
             </Col>
 
             <Testimonial />
-          </Row>
-        </Container>
-      </section>
-
-      {/* =============== blog section =========== */}
-      <section>
-        <Container>
-          <Row>
-            <Col lg="12" className="mb-5 text-center">
-              <h6 className="section__subtitle">Explore our blogs</h6>
-              <h2 className="section__title">Latest Blogs</h2>
-            </Col>
-
-            <BlogList />
           </Row>
         </Container>
       </section>

@@ -46,7 +46,7 @@ import img36 from "../all-images/Hardware/Yapistirici/2.jpg";
 import img37 from "../all-images/Hardware/Yapistirici/3.jpg";
 import img38 from "../all-images/Hardware/Yapistirici/4.jpg";
 
-const fastenerData = [
+const hardwareData = [
   // --Delme Kesme Yağları Grubu--
   {
     id: 1,
@@ -54,6 +54,7 @@ const fastenerData = [
     images: [img01], // Resim URL'leri dizisi
     imgUrl: img01,
     categoryId: 1,
+    category: "hardwareData",
     description:
       "İnter Delme Kesme ve Klavuz Jeli, metal işleme işlemlerinde delme, kesme ve klavuz çekme sırasında sürtünmeyi azaltmak ve iş parçasını korumak için kullanılan özel bir yağlayıcıdır. Bu jel, yüksek sıcaklıklara ve basınca dayanıklı olup, işlem sırasında kesici takımın ömrünü uzatır ve pürüzsüz bir yüzey elde edilmesini sağlar. Sürtünmeyi ve aşınmayı minimize ederek daha temiz kesimler ve hassas delikler elde edilmesine yardımcı olur. Genellikle endüstriyel uygulamalarda, torna, freze ve matkap tezgahlarında kullanılır. Metal işleme süreçlerinde verimliliği artırmak için ideal bir çözümdür.",
   },
@@ -63,6 +64,7 @@ const fastenerData = [
     images: [img02], // Resim URL'leri dizisi
     imgUrl: img02,
     categoryId: 1,
+    category: "hardwareData",
     description:
       "Weicon Delme Kesme Spreyi, metal işleme süreçlerinde delme, kesme, frezeleme ve diş açma gibi işlemler sırasında kullanılan bir yağlayıcı sprey türüdür. Yüksek performanslı yağlama ve soğutma özellikleri sayesinde, işlem sırasında sürtünmeyi ve ısınmayı azaltarak kesici aletlerin ömrünü uzatır. Ayrıca, iş parçasının korunmasını sağlar ve daha pürüzsüz, temiz kesimler elde edilmesine yardımcı olur. Weicon Delme Kesme Spreyi, paslanmaz çelik, demir, alüminyum ve diğer metallerde kullanılabilir. Özellikle endüstriyel metal işleme, bakım ve onarım işlerinde yaygın olarak tercih edilir.",
   },
@@ -74,6 +76,7 @@ const fastenerData = [
     images: [img03], // Resim URL'leri dizisi
     imgUrl: img03,
     categoryId: 2,
+    category: "hardwareData",
     description:
       "İş Güvenlik Ayakkabısı, çalışanları olası iş kazalarına karşı korumak amacıyla tasarlanmış, dayanıklı ve koruyucu ayakkabı türüdür. Genellikle ağır sanayi, inşaat, lojistik ve fabrika gibi riskli çalışma ortamlarında kullanılır. Çelik burunlu, kaymaz tabanlı ve darbelere karşı dayanıklı olan bu ayakkabılar, ayak yaralanmalarını önlemek için geliştirilmiştir. Ayrıca, suya, yağlara ve kimyasallara karşı direnç sağlayan modelleri de mevcuttur. İş güvenliği standartlarına uygun olarak üretilen bu ayakkabılar, çalışanların hem güvenliğini hem de konforunu artırmayı amaçlar.",
   },
@@ -83,7 +86,9 @@ const fastenerData = [
     images: [img04], // Resim URL'leri dizisi
     imgUrl: img04,
     categoryId: 2,
-    description: "Endüstriyel ortamlarda çalışırken göz sağlığınızı korumak hayati önem taşır. Paslanmaz çelik civata ve somunlarla çalışırken, parçacık sıçramaları, darbe riskleri ve çeşitli kimyasallardan kaynaklanan göz yaralanmalarını önlemek için özel olarak tasarlanmış koruyucu gözlüklerimiz, güvenliği ve dayanıklılığı bir araya getirir.",
+    category: "hardwareData",
+    description:
+      "Endüstriyel ortamlarda çalışırken göz sağlığınızı korumak hayati önem taşır. Paslanmaz çelik civata ve somunlarla çalışırken, parçacık sıçramaları, darbe riskleri ve çeşitli kimyasallardan kaynaklanan göz yaralanmalarını önlemek için özel olarak tasarlanmış koruyucu gözlüklerimiz, güvenliği ve dayanıklılığı bir araya getirir.",
   },
   {
     id: 5,
@@ -91,7 +96,9 @@ const fastenerData = [
     images: [img05], // Resim URL'leri dizisi
     imgUrl: img05,
     categoryId: 2,
-    description: "Endüstriyel ortamlarda, solunum yolu riskleri yaygın olabilir. Paslanmaz civata ve somun montajı gibi işlemler sırasında ortaya çıkan toz, partikül ve kimyasal buharlar, sağlığınızı tehdit edebilir. Koruyucu maskelerimiz, bu riskleri en aza indirerek güvenli ve temiz bir solunum sağlar.",
+    category: "hardwareData",
+    description:
+      "Endüstriyel ortamlarda, solunum yolu riskleri yaygın olabilir. Paslanmaz civata ve somun montajı gibi işlemler sırasında ortaya çıkan toz, partikül ve kimyasal buharlar, sağlığınızı tehdit edebilir. Koruyucu maskelerimiz, bu riskleri en aza indirerek güvenli ve temiz bir solunum sağlar.",
   },
   {
     id: 6,
@@ -99,7 +106,9 @@ const fastenerData = [
     images: [img06], // Resim URL'leri dizisi
     imgUrl: img06,
     categoryId: 2,
-    description: "Endüstriyel ortamlarda ellerinizi zararlı kimyasallardan, yağlardan ve kesici maddelerden korumak önemlidir. Nitril eldivenler, üstün dayanıklılık ve esneklik sunarak zorlu koşullarda maksimum el koruması sağlar. Paslanmaz civata ve somun montajı gibi hassas işlemlerde güvenle kullanılabilir.",
+    category: "hardwareData",
+    description:
+      "Endüstriyel ortamlarda ellerinizi zararlı kimyasallardan, yağlardan ve kesici maddelerden korumak önemlidir. Nitril eldivenler, üstün dayanıklılık ve esneklik sunarak zorlu koşullarda maksimum el koruması sağlar. Paslanmaz civata ve somun montajı gibi hassas işlemlerde güvenle kullanılabilir.",
   },
   {
     id: 7,
@@ -107,7 +116,9 @@ const fastenerData = [
     images: [img07], // Resim URL'leri dizisi
     imgUrl: img07,
     categoryId: 2,
-    description: "Nitril muayene eldivenleri, yüksek dayanıklılık ve hassasiyet sunarak tıbbi ve laboratuvar ortamlarında güvenli el koruması sağlar. Kimyasallara ve delinmelere karşı dirençli yapısıyla hijyenik koşullarda güvenle kullanılabilir. Lateks içermez, bu nedenle alerjik reaksiyon riskini en aza indirir.",
+    category: "hardwareData",
+    description:
+      "Nitril muayene eldivenleri, yüksek dayanıklılık ve hassasiyet sunarak tıbbi ve laboratuvar ortamlarında güvenli el koruması sağlar. Kimyasallara ve delinmelere karşı dirençli yapısıyla hijyenik koşullarda güvenle kullanılabilir. Lateks içermez, bu nedenle alerjik reaksiyon riskini en aza indirir.",
   },
   {
     id: 8,
@@ -115,7 +126,9 @@ const fastenerData = [
     images: [img08], // Resim URL'leri dizisi
     imgUrl: img08,
     categoryId: 2,
-    description: "Kaynak gözlükleri, gözlerinizi kaynak sırasında oluşan zararlı ışınlardan, kıvılcımlardan ve sıçrayan metal parçalarından korur. Yüksek ısıya dayanıklı yapısı ve UV/IR filtreleri sayesinde kaynak işlemleri sırasında maksimum güvenlik sağlar. Ergonomik tasarımı ile uzun süreli kullanımda dahi konfor sunar.",
+    category: "hardwareData",
+    description:
+      "Kaynak gözlükleri, gözlerinizi kaynak sırasında oluşan zararlı ışınlardan, kıvılcımlardan ve sıçrayan metal parçalarından korur. Yüksek ısıya dayanıklı yapısı ve UV/IR filtreleri sayesinde kaynak işlemleri sırasında maksimum güvenlik sağlar. Ergonomik tasarımı ile uzun süreli kullanımda dahi konfor sunar.",
   },
 
   // --Kaynak Ekipmanları--
@@ -125,7 +138,9 @@ const fastenerData = [
     images: [img09], // Resim URL'leri dizisi
     imgUrl: img09,
     categoryId: 3,
-    description: "Alüminyum kaynak telleri, hafif ve yüksek mukavemetli bağlantılar sağlamak için mükemmel bir seçimdir. Düşük erime noktası ve üstün korozyon direnci sayesinde, alüminyum ve alüminyum alaşımlarının kaynağında güvenle kullanılır. İnce işçilik gerektiren kaynak işlemleri için ideal bir çözüm sunar.",
+    category: "hardwareData",
+    description:
+      "Alüminyum kaynak telleri, hafif ve yüksek mukavemetli bağlantılar sağlamak için mükemmel bir seçimdir. Düşük erime noktası ve üstün korozyon direnci sayesinde, alüminyum ve alüminyum alaşımlarının kaynağında güvenle kullanılır. İnce işçilik gerektiren kaynak işlemleri için ideal bir çözüm sunar.",
   },
   {
     id: 10,
@@ -133,7 +148,9 @@ const fastenerData = [
     images: [img10], // Resim URL'leri dizisi
     imgUrl: img10,
     categoryId: 3,
-    description: "Gazaltı kaynak spreyi, kaynak sırasında sıçramaları önlemek ve ekipmanınızın korunmasını sağlamak için kullanılır. Yüzeyde ince bir koruyucu tabaka oluşturarak kaynak sırasında oluşan metal sıçramalarının yapışmasını engeller, böylece iş kalitesini artırır ve temizlik süresini azaltır. Tüm gazaltı kaynak işlemlerinde güvenle kullanılabilir.",
+    category: "hardwareData",
+    description:
+      "Gazaltı kaynak spreyi, kaynak sırasında sıçramaları önlemek ve ekipmanınızın korunmasını sağlamak için kullanılır. Yüzeyde ince bir koruyucu tabaka oluşturarak kaynak sırasında oluşan metal sıçramalarının yapışmasını engeller, böylece iş kalitesini artırır ve temizlik süresini azaltır. Tüm gazaltı kaynak işlemlerinde güvenle kullanılabilir.",
   },
   {
     id: 11,
@@ -141,7 +158,9 @@ const fastenerData = [
     images: [img11], // Resim URL'leri dizisi
     imgUrl: img11,
     categoryId: 3,
-    description: "Gazaltı kaynak telleri, güçlü ve temiz kaynak bağlantıları sağlamak için idealdir. Düşük sıçrama oranı ve yüksek verimliliği sayesinde, çelik ve paslanmaz çelik gibi metallerin birleştirilmesinde mükemmel sonuçlar sunar. İyi bir akış özelliği ve düzgün kaynak dikişleri ile endüstriyel kaynak uygulamalarında yaygın olarak tercih edilir.",
+    category: "hardwareData",
+    description:
+      "Gazaltı kaynak telleri, güçlü ve temiz kaynak bağlantıları sağlamak için idealdir. Düşük sıçrama oranı ve yüksek verimliliği sayesinde, çelik ve paslanmaz çelik gibi metallerin birleştirilmesinde mükemmel sonuçlar sunar. İyi bir akış özelliği ve düzgün kaynak dikişleri ile endüstriyel kaynak uygulamalarında yaygın olarak tercih edilir.",
   },
   {
     id: 12,
@@ -149,7 +168,9 @@ const fastenerData = [
     images: [img12], // Resim URL'leri dizisi
     imgUrl: img12,
     categoryId: 3,
-    description: "Kaynak eldivenleri, yüksek sıcaklık, kıvılcım ve metal sıçramalarına karşı ellerinizi korumak için tasarlanmıştır. Isıya dayanıklı malzemeden üretilen bu eldivenler, kaynak sırasında maksimum güvenlik ve dayanıklılık sağlar. Ergonomik yapısı ve ekstra uzun manşetleri ile ellerinizi ve bileklerinizi tam koruma altına alır.",
+    category: "hardwareData",
+    description:
+      "Kaynak eldivenleri, yüksek sıcaklık, kıvılcım ve metal sıçramalarına karşı ellerinizi korumak için tasarlanmıştır. Isıya dayanıklı malzemeden üretilen bu eldivenler, kaynak sırasında maksimum güvenlik ve dayanıklılık sağlar. Ergonomik yapısı ve ekstra uzun manşetleri ile ellerinizi ve bileklerinizi tam koruma altına alır.",
   },
   {
     id: 13,
@@ -157,7 +178,9 @@ const fastenerData = [
     images: [img13], // Resim URL'leri dizisi
     imgUrl: img13,
     categoryId: 3,
-    description: "Paslanmaz elektrodlar, yüksek kaliteli paslanmaz çelik kaynakları için özel olarak tasarlanmıştır. Paslanmaz çelik alaşımlarla uyumlu bu elektrodlar, mükemmel kaynak dikişleri ve üstün korozyon direnci sağlar. Özellikle endüstriyel uygulamalarda, dayanıklı ve estetik kaynak bağlantıları oluşturmak için idealdir.",
+    category: "hardwareData",
+    description:
+      "Paslanmaz elektrodlar, yüksek kaliteli paslanmaz çelik kaynakları için özel olarak tasarlanmıştır. Paslanmaz çelik alaşımlarla uyumlu bu elektrodlar, mükemmel kaynak dikişleri ve üstün korozyon direnci sağlar. Özellikle endüstriyel uygulamalarda, dayanıklı ve estetik kaynak bağlantıları oluşturmak için idealdir.",
   },
   {
     id: 14,
@@ -165,7 +188,9 @@ const fastenerData = [
     images: [img14], // Resim URL'leri dizisi
     imgUrl: img14,
     categoryId: 3,
-    description: "Paslanmaz kaynak telleri, paslanmaz çelik ve diğer alaşımların kaynak işlemlerinde yüksek performans sağlar. Yüksek korozyon direnci ve mükemmel akışkanlık özellikleri ile güçlü ve temiz kaynak bağlantıları oluşturur. Endüstriyel uygulamalarda, dayanıklılığı ve estetik görünümü ile ideal bir çözümdür.",
+    category: "hardwareData",
+    description:
+      "Paslanmaz kaynak telleri, paslanmaz çelik ve diğer alaşımların kaynak işlemlerinde yüksek performans sağlar. Yüksek korozyon direnci ve mükemmel akışkanlık özellikleri ile güçlü ve temiz kaynak bağlantıları oluşturur. Endüstriyel uygulamalarda, dayanıklılığı ve estetik görünümü ile ideal bir çözümdür.",
   },
   {
     id: 15,
@@ -173,7 +198,9 @@ const fastenerData = [
     images: [img15], // Resim URL'leri dizisi
     imgUrl: img15,
     categoryId: 3,
-    description: "Rutil elektrodlar, kolay kullanım ve yüksek kalite kaynak dikişleri sağlamak için tasarlanmıştır. Özellikle düşük akı ve iyi akış özellikleri ile öne çıkar, böylece kaynak işlemleri sırasında mükemmel yüzey kalitesi elde edilir. Bu elektrodlar, çeşitli metallerin kaynağında güvenilir performans sunar ve kullanımı kolaydır.",
+    category: "hardwareData",
+    description:
+      "Rutil elektrodlar, kolay kullanım ve yüksek kalite kaynak dikişleri sağlamak için tasarlanmıştır. Özellikle düşük akı ve iyi akış özellikleri ile öne çıkar, böylece kaynak işlemleri sırasında mükemmel yüzey kalitesi elde edilir. Bu elektrodlar, çeşitli metallerin kaynağında güvenilir performans sunar ve kullanımı kolaydır.",
   },
 
   // --Kesici Ve Aşındırıcı--
@@ -183,7 +210,9 @@ const fastenerData = [
     images: [img16], // Resim URL'leri dizisi
     imgUrl: img16,
     categoryId: 4,
-    description: "Inox kesme taşları, paslanmaz çelik ve diğer sert metallerin kesiminde üstün performans sağlar. Yüksek kaliteli aşındırıcı malzemelerden üretilen bu taşlar, temiz ve düzgün kesim sonuçları elde etmenizi sağlar. Dayanıklı yapısı ve düşük aşınma oranı ile uzun ömürlü kullanım sunar.",
+    category: "hardwareData",
+    description:
+      "Inox kesme taşları, paslanmaz çelik ve diğer sert metallerin kesiminde üstün performans sağlar. Yüksek kaliteli aşındırıcı malzemelerden üretilen bu taşlar, temiz ve düzgün kesim sonuçları elde etmenizi sağlar. Dayanıklı yapısı ve düşük aşınma oranı ile uzun ömürlü kullanım sunar.",
   },
   {
     id: 17,
@@ -191,7 +220,9 @@ const fastenerData = [
     images: [img17], // Resim URL'leri dizisi
     imgUrl: img17,
     categoryId: 4,
-    description: "Metal flap diskleri, metal yüzeylerin zımparalanması ve temizlenmesi için ideal bir araçtır. Üstün aşındırıcı malzemeleri sayesinde etkili bir şekilde yüzey düzeltir ve metal parçaların son işleminde yüksek performans sağlar. Uzun ömürlü ve dayanıklı yapıları ile hem kaba hem de ince işlerde güvenle kullanılabilir.",
+    category: "hardwareData",
+    description:
+      "Metal flap diskleri, metal yüzeylerin zımparalanması ve temizlenmesi için ideal bir araçtır. Üstün aşındırıcı malzemeleri sayesinde etkili bir şekilde yüzey düzeltir ve metal parçaların son işleminde yüksek performans sağlar. Uzun ömürlü ve dayanıklı yapıları ile hem kaba hem de ince işlerde güvenle kullanılabilir.",
   },
   {
     id: 18,
@@ -199,7 +230,9 @@ const fastenerData = [
     images: [img18], // Resim URL'leri dizisi
     imgUrl: img18,
     categoryId: 4,
-    description: "Metal kesme taşları, çeşitli metal yüzeylerin kesiminde yüksek performans sunar. Sert ve dayanıklı aşındırıcı malzemelerden üretilmiş olup, hızlı ve temiz kesimler sağlar. Uzun ömürlü yapıları ve düşük aşınma oranları ile endüstriyel uygulamalarda güvenilir bir çözümdür.",
+    category: "hardwareData",
+    description:
+      "Metal kesme taşları, çeşitli metal yüzeylerin kesiminde yüksek performans sunar. Sert ve dayanıklı aşındırıcı malzemelerden üretilmiş olup, hızlı ve temiz kesimler sağlar. Uzun ömürlü yapıları ve düşük aşınma oranları ile endüstriyel uygulamalarda güvenilir bir çözümdür.",
   },
   {
     id: 19,
@@ -207,7 +240,9 @@ const fastenerData = [
     images: [img19], // Resim URL'leri dizisi
     imgUrl: img19,
     categoryId: 4,
-    description: "Paslanmaz flap diskleri, paslanmaz çelik ve diğer metal yüzeylerin zımparalanması ve düzeltilmesinde yüksek performans sağlar. Dayanıklı ve yüksek kaliteli aşındırıcı malzemeleri sayesinde, yüzeylerde hızlı ve etkili bir şekilde işlem yapar. Uzun ömürlü ve güvenilir yapıları ile endüstriyel ve ticari uygulamalarda tercih edilir.",
+    category: "hardwareData",
+    description:
+      "Paslanmaz flap diskleri, paslanmaz çelik ve diğer metal yüzeylerin zımparalanması ve düzeltilmesinde yüksek performans sağlar. Dayanıklı ve yüksek kaliteli aşındırıcı malzemeleri sayesinde, yüzeylerde hızlı ve etkili bir şekilde işlem yapar. Uzun ömürlü ve güvenilir yapıları ile endüstriyel ve ticari uygulamalarda tercih edilir.",
   },
   {
     id: 20,
@@ -215,7 +250,9 @@ const fastenerData = [
     images: [img20], // Resim URL'leri dizisi
     imgUrl: img20,
     categoryId: 4,
-    description: "Karbosan taşlama taşları, metal ve benzeri sert yüzeylerin yüksek verimlilikle işlenmesi için tasarlanmıştır. Kaliteli aşındırıcı malzemeleri ve dayanıklı yapısı sayesinde, hızlı kesim ve düzgün yüzey işleme sağlar. Endüstriyel uygulamalarda güvenilir ve uzun ömürlü performans sunar",
+    category: "hardwareData",
+    description:
+      "Karbosan taşlama taşları, metal ve benzeri sert yüzeylerin yüksek verimlilikle işlenmesi için tasarlanmıştır. Kaliteli aşındırıcı malzemeleri ve dayanıklı yapısı sayesinde, hızlı kesim ve düzgün yüzey işleme sağlar. Endüstriyel uygulamalarda güvenilir ve uzun ömürlü performans sunar",
   },
 
   //--Ambalaj ve Paketleme--
@@ -225,7 +262,9 @@ const fastenerData = [
     images: [img21], // Resim URL'leri dizisi
     imgUrl: img21,
     categoryId: 5,
-    description: "Dilimli streç film, ürünleri güvenli bir şekilde sarmak ve korumak için ideal bir çözüm sunar. Kolay uygulanabilir yapısı ve yüksek yapışkanlık özelliği sayesinde, paketleme işlemlerinde etkili bir koruma sağlar. Kırılma, tozlanma ve nemden koruyarak ürünlerin güvenliğini artırır.",
+    category: "hardwareData",
+    description:
+      "Dilimli streç film, ürünleri güvenli bir şekilde sarmak ve korumak için ideal bir çözüm sunar. Kolay uygulanabilir yapısı ve yüksek yapışkanlık özelliği sayesinde, paketleme işlemlerinde etkili bir koruma sağlar. Kırılma, tozlanma ve nemden koruyarak ürünlerin güvenliğini artırır.",
   },
   {
     id: 22,
@@ -233,7 +272,9 @@ const fastenerData = [
     images: [img22], // Resim URL'leri dizisi
     imgUrl: img22,
     categoryId: 5,
-    description: "Gıda streçi, yiyecekleri taze tutmak ve saklama süresini uzatmak için kullanılan pratik bir üründür. Yüksek yapışkanlık özelliği sayesinde, gıdaları hava ve nemden korur, aynı zamanda sızıntıları önler. Mikrodalga ve buzdolabı kullanımı için uygun olup, çeşitli gıda maddelerinin güvenli bir şekilde saklanmasına yardımcı olur",
+    category: "hardwareData",
+    description:
+      "Gıda streçi, yiyecekleri taze tutmak ve saklama süresini uzatmak için kullanılan pratik bir üründür. Yüksek yapışkanlık özelliği sayesinde, gıdaları hava ve nemden korur, aynı zamanda sızıntıları önler. Mikrodalga ve buzdolabı kullanımı için uygun olup, çeşitli gıda maddelerinin güvenli bir şekilde saklanmasına yardımcı olur",
   },
   {
     id: 23,
@@ -241,7 +282,9 @@ const fastenerData = [
     images: [img23], // Resim URL'leri dizisi
     imgUrl: img23,
     categoryId: 5,
-    description: "Akrilik koli bandı, güçlü yapışkanlığı ve dayanıklı yapısı ile ambalajlama ve paketleme işlemlerinde ideal bir tercihtir. Hafif ve orta ağırlıktaki kutuların güvenli bir şekilde kapatılmasını sağlar. UV ışınlarına ve yaşlanmaya karşı dirençli olup, uzun ömürlü kullanım ve güvenilir performans sunar.",
+    category: "hardwareData",
+    description:
+      "Akrilik koli bandı, güçlü yapışkanlığı ve dayanıklı yapısı ile ambalajlama ve paketleme işlemlerinde ideal bir tercihtir. Hafif ve orta ağırlıktaki kutuların güvenli bir şekilde kapatılmasını sağlar. UV ışınlarına ve yaşlanmaya karşı dirençli olup, uzun ömürlü kullanım ve güvenilir performans sunar.",
   },
   {
     id: 24,
@@ -249,7 +292,9 @@ const fastenerData = [
     images: [img24], // Resim URL'leri dizisi
     imgUrl: img24,
     categoryId: 5,
-    description: "Hotmelt koli bandı, yüksek yapışkanlık gücü ve mükemmel performansıyla ambalajlama işlemlerinde güvenilir bir çözüm sunar. Hotmelt yapışkan özelliği, hızlı ve güçlü bir yapışma sağlar, böylece kutuları güvenli bir şekilde kapatır ve dayanıklı bir kaplama oluşturur. Çeşitli hava koşullarına karşı dayanıklıdır ve uzun ömürlü kullanım sağlar.",
+    category: "hardwareData",
+    description:
+      "Hotmelt koli bandı, yüksek yapışkanlık gücü ve mükemmel performansıyla ambalajlama işlemlerinde güvenilir bir çözüm sunar. Hotmelt yapışkan özelliği, hızlı ve güçlü bir yapışma sağlar, böylece kutuları güvenli bir şekilde kapatır ve dayanıklı bir kaplama oluşturur. Çeşitli hava koşullarına karşı dayanıklıdır ve uzun ömürlü kullanım sağlar.",
   },
   {
     id: 25,
@@ -257,9 +302,10 @@ const fastenerData = [
     images: [img25], // Resim URL'leri dizisi
     imgUrl: img25,
     categoryId: 5,
-    description: "Palet streçi, palet üzerindeki ürünleri güvenli bir şekilde sarmak ve stabilize etmek için kullanılır. Yüksek elastikiyeti ve güçlü yapışkanlığı sayesinde, taşınma ve depolama sırasında ürünlerin kaymasını ve zarar görmesini önler. Dayanıklı yapısı, çeşitli hava koşullarına karşı koruma sağlar ve etkin paketleme çözümleri sunar.",
+    category: "hardwareData",
+    description:
+      "Palet streçi, palet üzerindeki ürünleri güvenli bir şekilde sarmak ve stabilize etmek için kullanılır. Yüksek elastikiyeti ve güçlü yapışkanlığı sayesinde, taşınma ve depolama sırasında ürünlerin kaymasını ve zarar görmesini önler. Dayanıklı yapısı, çeşitli hava koşullarına karşı koruma sağlar ve etkin paketleme çözümleri sunar.",
   },
-
 ];
 
-export default fastenerData;
+export default hardwareData;
