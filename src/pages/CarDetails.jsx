@@ -33,6 +33,7 @@ const CarDetails = () => {
   const [mainImage, setMainImage] = useState(singleCarItem.images[0]);
 
   useEffect(() => {
+    setMainImage(singleCarItem.images[0]);
     window.scrollTo(0, 0);
   }, [singleCarItem]);
 

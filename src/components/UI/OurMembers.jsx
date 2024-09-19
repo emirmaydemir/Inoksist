@@ -18,7 +18,7 @@ const OUR__MEMBERS = [
   },
 
   {
-    name: "Edanur Yıldırım",
+    name: "Kadriye Kartal",
     experience: "Malzeme Mühend (+90) 532 234 56 78",
     fbUrl: "#",
     instUrl: "#",
@@ -38,7 +38,7 @@ const OUR__MEMBERS = [
   },
 
   {
-    name: "Burak Bulut",
+    name: "Kadir Kartal",
     experience: "Üretim Müdürü (+90) 532 456 78 90",
     fbUrl: "#",
     instUrl: "#",

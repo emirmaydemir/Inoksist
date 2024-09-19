@@ -55,6 +55,73 @@
   object-fit: cover;
 }
 
+.search-results {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 255); /* Daha şeffaf arkaplan */
+  border: 1px solid #ccc;
+  width: 16%;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 100;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Modern gölge efekti */
+  border-radius: 5px; /* Köşeleri yuvarla */
+}
+
+.search-result-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-decoration: none;
+  color: black;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animasyonlar */
+}
+
+.search-result-card:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Hover'da şeffaf gri arkaplan */
+  transform: translateY(-2px); /* Hover'da hafif yukarı çıkma efekti */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Hover'da ekstra gölge */
+}
+
+.search-result-card:active {
+  background-color: rgba(0, 0, 0, 0.1); /* Tıklanırken koyu gri arkaplan */
+  transform: scale(0.98); /* Hafif küçülme efekti tıklanınca */
+}
+
+.search-result-card img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 8px; /* Köşeleri hafif yuvarla */
+}
+
+@media only screen and (max-width: 1500px) {
+  .search-results {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 255); /* Daha şeffaf arkaplan */
+    border: 1px solid #ccc;
+    width: 19%;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 100;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Modern gölge efekti */
+    border-radius: 2px; /* Köşeleri yuvarla */
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .search-results {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 255); /* Daha şeffaf arkaplan */
+    border: 1px solid #ccc;
+    width: 50%;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 100;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Modern gölge efekti */
+    border-radius: 5px; /* Köşeleri yuvarla */
+  }
+}
 /* ================ main navbar styles =========== */
 
 .main__navbar {
@@ -91,10 +158,10 @@
 
 .search__box {
   border: 1px solid #7c8a972f;
-  padding: 7px 10px;
+  padding: 5px 18px;
   display: flex;
   align-items: center;
-  border-radius: 50px;
+  border-radius: 15px;
   background: #020a4de9;
 }
 
@@ -126,11 +193,9 @@
 
 @media only screen and (max-width: 1024px) {
   .header__top,
-  .header__middle,
-  .nav__right {
+  .header__middle {
     display: none;
   }
-
   .mobile__menu {
     display: block;
   }
