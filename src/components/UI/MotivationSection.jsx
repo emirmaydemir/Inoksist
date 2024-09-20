@@ -1,10 +1,10 @@
 import React from "react";
-import "../../styles/become-driver.css";
+import "../../styles/become-motivation.css";
 import { Container, Row, Col } from "reactstrap";
 import { useNavigate } from "react-router-dom";
 import driverImg from "../../assets/all-images/civata2.jpg";
 
-const BecomeDriverSection = () => {
+const MotivationSection = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -13,20 +13,20 @@ const BecomeDriverSection = () => {
   };
 
   return (
-    <section className="become__driver">
+    <section className="become__motivation">
       <Container>
         <Row>
-          <Col lg="6" md="6" sm="12" className="become__driver-img">
+          <Col lg="6" md="6" sm="12" className="become__motivation-img">
             <img src={driverImg} alt="" className="w-100" />
           </Col>
 
           <Col lg="6" md="6" sm="12">
-            <h2 className="section__title become__driver-title">
+            <h2 className="section__title become__motivation-title">
               Bizimle Kazanmaya Ne Dersiniz? Geç Kalmayın!
             </h2>
 
             <button
-              className="btn become__driver-btn mt-4"
+              className="btn become__motivation-btn mt-4"
               onClick={handleClick}
             >
               Ürünlerimizi Keşfedin
@@ -38,4 +38,4 @@ const BecomeDriverSection = () => {
   );
 };
 
-export default BecomeDriverSection;
+export default MotivationSection;

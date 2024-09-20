@@ -1,4 +1,4 @@
-.car__item {
+.product__item {
   border: 1px solid #7c8a9736;
   padding: 20px;
   border-radius: 5px;
@@ -6,27 +6,27 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Yumuşak geçiş */
 }
 
-.car__item-content h4 {
+.product__img-content h4 {
   font-size: 1.5rem;
 }
 
-.car__img img {
+.product__img img {
   transition: transform 0.3s ease; /* Resim geçişini yumuşatır */
 }
 
-.car__img:hover img {
+.product__img:hover img {
   transform: scale(1.1); /* Resmi %10 büyüt */
 }
 
 @media only screen and (max-width: 992px) {
-  .car__item h4 {
+  .product__img h4 {
     font-size: 1.1rem;
     margin-bottom: 0;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .car__item h4 {
+  .product__img h4 {
     font-size: 1rem;
   }
 }

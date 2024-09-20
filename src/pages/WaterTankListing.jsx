@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
-import CarItem from "../components/UI/CarItem";
+import ProductItem from "../components/UI/ProductItem";
 import waterData from "../assets/data/waterData";
 import { WaterTankData } from "../assets/data/categoriesData";
 import "../styles/select.css";
 
+//MODÜLER SU DEPOSU
 const WaterTankListing = () => {
   // Kategorini Seç
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -16,12 +17,12 @@ const WaterTankListing = () => {
     setSelectedCategory(e.target.value); // Seçilen kategoriyi state'e kaydet
   };
 
-  const filteredCars = selectedCategory
+  const filteredProducts = selectedCategory
     ? waterData.filter((car) => car.categoryId === parseInt(selectedCategory))
     : waterData;
 
   return (
-    <Helmet title="Cars2">
+    <Helmet title="products2">
       <CommonSection title="Modüler Su Deposu" />
 
       <section>
@@ -48,8 +49,8 @@ const WaterTankListing = () => {
               </div>
             </Col>
 
-            {filteredCars.map((item) => (
-              <CarItem item={item} key={item.id} />
+            {filteredProducts.map((item) => (
+              <ProductItem item={item} key={item.id} />
             ))}
           </Row>
         </Container>

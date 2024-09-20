@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
-import CarItem from "../components/UI/CarItem";
+import ProductItem from "../components/UI/ProductItem";
 import chemicalData from "../assets/data/chemicalData";
 import { ChemicalData } from "../assets/data/categoriesData";
 import "../styles/select.css";
 
+//BAKIM KİMYASALLARI
 const ChemicalsListing = () => {
   // Kategorini Seç
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -16,14 +17,14 @@ const ChemicalsListing = () => {
     setSelectedCategory(e.target.value); // Seçilen kategoriyi state'e kaydet
   };
 
-  const filteredCars = selectedCategory
+  const filteredProducts = selectedCategory
     ? chemicalData.filter(
         (car) => car.categoryId === parseInt(selectedCategory)
       )
     : chemicalData;
 
   return (
-    <Helmet title="Cars3">
+    <Helmet title="products3">
       <CommonSection title="Bakım Kimyasalları" />
 
       <section>
@@ -50,8 +51,8 @@ const ChemicalsListing = () => {
               </div>
             </Col>
 
-            {filteredCars.map((item) => (
-              <CarItem item={item} key={item.id} />
+            {filteredProducts.map((item) => (
+              <ProductItem item={item} key={item.id} />
             ))}
           </Row>
         </Container>

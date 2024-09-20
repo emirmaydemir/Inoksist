@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
-import CarItem from "../components/UI/CarItem";
+import ProductItem from "../components/UI/ProductItem";
 import fastenerData from "../assets/data/fastenerData";
 import { FastenerData } from "../assets/data/categoriesData";
 import "../styles/select.css";
 
+//BAĞLANTI ELEMANLARI
 const FastenerListing = () => {
   // Kategorini Seç
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -16,14 +17,14 @@ const FastenerListing = () => {
     setSelectedCategory(e.target.value); // Seçilen kategoriyi state'e kaydet
   };
 
-  const filteredCars = selectedCategory
+  const filteredProducts = selectedCategory
     ? fastenerData.filter(
         (car) => car.categoryId === parseInt(selectedCategory)
       )
     : fastenerData;
 
   return (
-    <Helmet title="Cars">
+    <Helmet title="products">
       <CommonSection title="Bağlantı Elemanları" />
 
       <section>
@@ -50,8 +51,8 @@ const FastenerListing = () => {
               </div>
             </Col>
 
-            {filteredCars.map((item) => (
-              <CarItem item={item} key={item.id} />
+            {filteredProducts.map((item) => (
+              <ProductItem item={item} key={item.id} />
             ))}
           </Row>
         </Container>

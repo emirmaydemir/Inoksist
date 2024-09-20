@@ -2,9 +2,8 @@ import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "../pages/Home";
 import About from "../pages/About";
-import CarDetails from "../pages/CarDetails";
-import Blog from "../pages/Blog";
-import BlogDetails from "../pages/BlogDetails";
+import ProductDetails from "../pages/ProductDetails";
+import PriceList from "../pages/PriceList";
 import NotFound from "../pages/NotFound";
 import Contact from "../pages/Contact";
 import FastenerListing from "../pages/FastenerListing";
@@ -18,13 +17,12 @@ const Routers = () => {
       <Route path="/" element={<Navigate to="/home" />} />
       <Route path="/home" element={<Home />} />
       <Route path="/about" element={<About />} />
-      <Route path="/cars" element={<FastenerListing />} />
-      <Route path="/cars2" element={<HardwareListing />} />
-      <Route path="/cars3" element={<ChemicalsListing />} />
-      <Route path="/cars4" element={<WaterTankListing />} />
-      <Route path="/cars/:category/:slug" element={<CarDetails />} />
-      <Route path="/blogs" element={<Blog />} />
-      <Route path="/blogs/:slug" element={<BlogDetails />} />
+      <Route path="/products" element={<FastenerListing />} />
+      <Route path="/products2" element={<HardwareListing />} />
+      <Route path="/products3" element={<ChemicalsListing />} />
+      <Route path="/products4" element={<WaterTankListing />} />
+      <Route path="/products/:category/:slug" element={<ProductDetails />} />
+      <Route path="/price" element={<PriceList />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} />
     </Routes>

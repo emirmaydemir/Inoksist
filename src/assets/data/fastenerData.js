@@ -120,6 +120,24 @@ const fastenerData = [
     category: "fastenerData",
     description:
       "DIN 933 Altı Köşe Cıvata A2, paslanmaz çelikten üretilmiş, tam dişli bir altı köşe başlı cıvatadır. DIN 933 standardına uygun olarak üretilen bu cıvata, A2 kalite paslanmaz çelikten yapılmış olup, korozyona dayanıklılığı sayesinde özellikle nemli veya dış ortam koşullarında uzun süre kullanılabilir. Bu tür cıvatalar, genellikle makine, inşaat ve yapı endüstrilerinde kullanılan, yüksek mukavemet ve dayanıklılık gerektiren uygulamalar için tercih edilir.",
+    specifications: [
+      {
+        headers: ["Uzunluk", "Çap", "Malzeme", "Standart"],
+        data: [
+          ["30 mm", "5 mm", "Paslanmaz Çelik", "DIN 933"],
+          ["50 mm", "6 mm", "Paslanmaz Çelik", "DIN 933"],
+        ],
+      },
+      {
+        title: "Fiziksel Özellikler",
+        headers: ["Ağırlık", "Mukavemet", "Korozyon Dayanıklılığı"],
+        data: [
+          ["100 g", "Yüksek", "Yüksek"],
+          ["150 g", "Orta", "Orta"],
+        ],
+      },
+    ],
+    technicalDrawings: [img01, img01],
   },
   {
     id: 2,

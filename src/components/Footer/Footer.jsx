@@ -6,21 +6,21 @@ import "../../styles/footer.css";
 
 const quickLinks = [
   {
-    path: "/cars",
+    path: "/products",
     display: "Bağlantı Elemanları",
   },
 
   {
-    path: "/cars2",
+    path: "/products2",
     display: "Teknik Hırdavat",
   },
 
   {
-    path: "/cars3",
+    path: "/products3",
     display: "Bakım Kimyasalları",
   },
   {
-    path: "/cars4",
+    path: "/products4",
     display: "Modüler Su Deposu",
   },
 

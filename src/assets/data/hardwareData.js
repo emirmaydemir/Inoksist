@@ -29,22 +29,9 @@ import img22 from "../all-images/Hardware/Sizdirmalik/2.jpg";
 import img23 from "../all-images/Hardware/Ambalaj/1.jpg";
 import img24 from "../all-images/Hardware/Ambalaj/2.jpg";
 import img25 from "../all-images/Hardware/Ambalaj/3.jpg";
-import img26 from "../all-images/Hardware/Ambalaj/4.jpg";
-import img27 from "../all-images/Hardware/Ambalaj/5.jpg";
 // Sprey Boya
-import img28 from "../all-images/Hardware/Sprey/1.jpg";
-import img29 from "../all-images/Hardware/Sprey/2.jpg";
 // Yapı Kimyasalları Grubu
-import img30 from "../all-images/Hardware/Yapi/1.jpg";
-import img31 from "../all-images/Hardware/Yapi/2.jpg";
-import img32 from "../all-images/Hardware/Yapi/3.jpg";
-import img33 from "../all-images/Hardware/Yapi/4.jpg";
-import img34 from "../all-images/Hardware/Yapi/5.jpg";
 // Yapıştırıcı Grubu
-import img35 from "../all-images/Hardware/Yapistirici/1.jpg";
-import img36 from "../all-images/Hardware/Yapistirici/2.jpg";
-import img37 from "../all-images/Hardware/Yapistirici/3.jpg";
-import img38 from "../all-images/Hardware/Yapistirici/4.jpg";
 
 const hardwareData = [
   // --Delme Kesme Yağları Grubu--

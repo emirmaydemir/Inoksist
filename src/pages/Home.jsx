@@ -4,16 +4,13 @@ import HeroSlider from "../components/UI/HeroSlider";
 import Helmet from "../components/Helmet/Helmet";
 import sponsor from "../assets/all-images/markalar.jpg";
 import { Container, Row, Col } from "reactstrap";
-import FindCarForm from "../components/UI/FindCarForm";
+import "../styles/find-product-form.css";
 import AboutSection from "../components/UI/AboutSection";
 import ServicesList from "../components/UI/ServicesList";
-import carData from "../assets/data/fastenerData";
-import CarItem from "../components/UI/CarItem";
-import BecomeDriverSection from "../components/UI/BecomeDriverSection";
+import MotivationSection from "../components/UI/MotivationSection";
 import Testimonial from "../components/UI/Testimonial";
 
-import BlogList from "../components/UI/BlogList";
-
+//ANASAYFA
 const Home = () => {
   return (
     <Helmet title="Home">
@@ -58,13 +55,13 @@ const Home = () => {
             </Col>
 
             {carData.slice(0, 6).map((item) => (
-              <CarItem item={item} key={item.id} />
+              <ProductItem item={item} key={item.id} />
             ))}
           </Row>
         </Container>
       </section>*/}
       {/* =========== become a driver section ============ */}
-      <BecomeDriverSection />
+      <MotivationSection />
 
       {/* =========== testimonial section =========== */}
       <section>
