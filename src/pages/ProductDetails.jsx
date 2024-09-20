@@ -103,6 +103,7 @@ const ProductDetails = () => {
               </Row>
             )}
 
+            {/* Ürün Tabloları */}
             {singleProductItem.specifications?.length > 0 && (
               <Row className="mt-5">
                 <Col lg="12">
@@ -124,13 +125,7 @@ const ProductDetails = () => {
                           </thead>
                           <tbody>
                             {spec.data.map((row, rowIndex) => (
-                              <tr
-                                key={rowIndex}
-                                style={{
-                                  backgroundColor:
-                                    rowIndex % 2 === 0 ? "#FF0000" : "#FF0000",
-                                }}
-                              >
+                              <tr key={rowIndex}>
                                 {row.map((cell, cellIndex) => (
                                   <td key={cellIndex}>{cell}</td>
                                 ))}
