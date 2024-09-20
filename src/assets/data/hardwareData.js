@@ -22,9 +22,6 @@ import img17 from "../all-images/Hardware/Kesici/2.jpg";
 import img18 from "../all-images/Hardware/Kesici/3.jpg";
 import img19 from "../all-images/Hardware/Kesici/4.jpg";
 import img20 from "../all-images/Hardware/Kesici/5.jpg";
-// Sızdırmazlık Grubu
-import img26 from "../all-images/Hardware/Sizdirmalik/1.jpg";
-import img27 from "../all-images/Hardware/Sizdirmalik/2.jpg";
 // Ambalaj ve Paketleme Grubu
 // Sprey Boya
 // Yapı Kimyasalları Grubu
