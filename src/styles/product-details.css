@@ -70,7 +70,7 @@
   border: 1px solid #ddd; /* İçerik kapsayıcısının etrafında ince bir çizgi */
   border-radius: 5px; /* Köşeleri yuvarlatmak için */
   padding: 15px; /* İçerik ile çizgi arasındaki boşluk */
-  background-color: #fff; /* Arka plan rengi */
+  background-color: #bebebe; /* Arka plan rengi */
   margin-bottom: 20px; /* Kapsayıcılar arasındaki boşluk */
 }
 
