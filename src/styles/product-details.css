@@ -70,7 +70,7 @@
   border: 1px solid #ddd; /* İçerik kapsayıcısının etrafında ince bir çizgi */
   border-radius: 5px; /* Köşeleri yuvarlatmak için */
   padding: 15px; /* İçerik ile çizgi arasındaki boşluk */
-  background-color: #bebebe; /* Arka plan rengi */
+  background-color: #ffffff; /* Arka plan rengi */
   margin-bottom: 20px; /* Kapsayıcılar arasındaki boşluk */
 }
 
@@ -90,7 +90,7 @@
   border: 2px solid #ddd; /* Kapsayıcının etrafında ince bir çizgi */
   border-radius: 5px; /* Köşeleri yuvarlatmak için */
   padding: 20px; /* İçerik ile çizgi arasındaki boşluk */
-  background-color: #f9f9f9; /* Arka plan rengi */
+  background-color: #f5f0f0; /* Arka plan rengi */
   margin-top: 20px; /* Üstten boşluk */
 }
 
