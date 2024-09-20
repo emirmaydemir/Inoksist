@@ -48,7 +48,6 @@
   max-width: 100%; /* Teknik resimlerin genişliği */
   max-height: 150px; /* Yükseklik */
   margin: 5px; /* Resimler arasındaki boşluk */
-  border: 1px solid #ddd;
   padding: 5px;
 }
 
@@ -67,8 +66,6 @@
 }
 
 .section-container2 {
-  border: 1px solid #ddd; /* İçerik kapsayıcısının etrafında ince bir çizgi */
-  border-radius: 5px; /* Köşeleri yuvarlatmak için */
   padding: 15px; /* İçerik ile çizgi arasındaki boşluk */
   background-color: #ffffff; /* Arka plan rengi */
   margin-bottom: 20px; /* Kapsayıcılar arasındaki boşluk */
@@ -87,10 +84,10 @@
 }
 
 .product-details-container {
-  border: 2px solid #ddd; /* Kapsayıcının etrafında ince bir çizgi */
+  border: 3px solid #ddd; /* Kapsayıcının etrafında ince bir çizgi */
   border-radius: 5px; /* Köşeleri yuvarlatmak için */
   padding: 20px; /* İçerik ile çizgi arasındaki boşluk */
-  background-color: #f5f0f0; /* Arka plan rengi */
+  background-color: #ffffff; /* Arka plan rengi */
   margin-top: 20px; /* Üstten boşluk */
 }
 

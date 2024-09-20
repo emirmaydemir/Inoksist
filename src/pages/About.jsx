@@ -7,7 +7,7 @@ import { Container, Row, Col } from "reactstrap";
 import MotivationSection from "../components/UI/MotivationSection";
 
 import bolt from "../assets/all-images/civata2.jpg";
-import OurMembers from "../components/UI/OurMembers";
+import Testimonial from "../components/UI/Testimonial";
 import "../styles/about.css";
 
 //HAKKIMIZDA
@@ -72,11 +72,12 @@ const About = () => {
       <section>
         <Container>
           <Row>
-            <Col lg="12" className="mb-5 text-center">
-              <h6 className="section__subtitle">Uzman</h6>
-              <h2 className="section__title">Üyelerimiz</h2>
+            <Col lg="12" className="mb-4 text-center">
+              <h6 className="section__subtitle">Öne Çıkan Ürünler</h6>
+              <h2 className="section__title">Trend Ürünler</h2>
             </Col>
-            <OurMembers />
+
+            <Testimonial />
           </Row>
         </Container>
       </section>

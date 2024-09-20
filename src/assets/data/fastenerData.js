@@ -114,6 +114,8 @@ const fastenerData = [
   {
     id: 1,
     name: "DIN 933 Altı Köşe Cıvata A2",
+    title2: "Altı Köşe Cıvata A2",
+    title3: "Deneme test",
     images: [img01], // Resim URL'leri dizisi
     imgUrl: img01,
     categoryId: 1,

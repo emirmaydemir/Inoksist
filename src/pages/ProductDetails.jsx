@@ -108,7 +108,15 @@ const ProductDetails = () => {
               <Row className="mt-5">
                 <Col lg="12">
                   <div className="section-container2">
-                    <h3 className="mb-3">{singleProductItem.name}</h3>
+                    <h4 className="fw-bold"> {singleProductItem.name}</h4>
+                    {singleProductItem.title2 && (
+                      <h5 className="fw-light fst-italic ">
+                        {singleProductItem.title2}
+                      </h5>
+                    )}
+                    {singleProductItem.title3 && (
+                      <h6 className="fw-normal">{singleProductItem.title3}</h6>
+                    )}
                     {singleProductItem.specifications.map((spec, index) => (
                       <div key={index} className="specification-table mb-4">
                         {/* Title varsa göster, yoksa atla */}

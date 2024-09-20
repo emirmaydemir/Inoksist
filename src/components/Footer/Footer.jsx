@@ -93,8 +93,8 @@ const Footer = () => {
             <div className="mb-4">
               <h5 className="footer__link-title mb-4">İLETİŞİM BİLGİLERİ</h5>
               <p className="office__info">
-                Adres: İ.O.S.B. Aykosan San. Sit. 4'lü B Blok No: 55
-                Başakşehir/İSTANBUL
+                İ.O.S.B. mah. İmsan Sanayi sitesi E 3 blok sok no 3 küçükçekmece
+                / İSTANBUL
               </p>
               <p className="office__info">Telefon: +90 (212) 549 70 55</p>
 
