@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Container,
   Row,
@@ -16,6 +16,9 @@ import "../styles/contact.css";
 
 //İLETİŞİM
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); // Boş dizi, sadece bileşen ilk render edildiğinde çalışmasını sağlar
   return (
     <Helmet title="İletişim">
       <CommonSection title="İletişim" />

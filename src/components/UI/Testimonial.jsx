@@ -1,6 +1,5 @@
 import React from "react";
 import Slider from "react-slick";
-
 import "../../styles/testimonial.css";
 
 import productImage1 from "../../assets/all-images/Fastener/1.jpg";
@@ -15,8 +14,10 @@ const Testimonial = () => {
     autoplay: true,
     speed: 1000,
     swipeToSlide: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1500,
     slidesToShow: 3,
+    draggable: true, // Fare ile sürüklenebilirlik
+    touchMove: true, // Dokunmatik hareketlere izin ver
     slidesToScroll: 1,
     responsive: [
       {

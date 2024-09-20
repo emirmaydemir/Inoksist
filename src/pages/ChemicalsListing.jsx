@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
@@ -9,8 +10,17 @@ import "../styles/select.css";
 
 //BAKIM KİMYASALLARI
 const ChemicalsListing = () => {
+  const { category } = useParams();
+
   // Kategorini Seç
   const [selectedCategory, setSelectedCategory] = useState("");
+
+  // URL'den alınan kategori parametresini state'e ata
+  useEffect(() => {
+    if (category) {
+      setSelectedCategory(category);
+    }
+  }, [category]);
 
   // Kategori değiştiğinde bu fonksiyon çalışacak
   const handleCategoryChange = (e) => {
@@ -19,7 +29,7 @@ const ChemicalsListing = () => {
 
   const filteredProducts = selectedCategory
     ? chemicalData.filter(
-        (car) => car.categoryId === parseInt(selectedCategory)
+        (product) => product.categoryId === parseInt(selectedCategory)
       )
     : chemicalData;
 
@@ -40,6 +50,7 @@ const ChemicalsListing = () => {
                   onChange={handleCategoryChange}
                   className="custom-select"
                   aria-label="Kategoriler"
+                  value={selectedCategory}
                 >
                   <option value="">Tüm Kategoriler</option>
                   {ChemicalData.map((category) => (

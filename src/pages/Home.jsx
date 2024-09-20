@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import HeroSlider from "../components/UI/HeroSlider";
 import Helmet from "../components/Helmet/Helmet";
@@ -12,6 +12,9 @@ import Testimonial from "../components/UI/Testimonial";
 
 //ANASAYFA
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); // Boş dizi, sadece bileşen ilk render edildiğinde çalışmasını sağlar
   return (
     <Helmet title="Home">
       {/* ============= hero section =========== */}

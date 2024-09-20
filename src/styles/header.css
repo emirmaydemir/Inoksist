@@ -124,6 +124,47 @@
 }
 /* ================ main navbar styles =========== */
 
+.nav__item-container {
+  position: relative;
+}
+
+/* Alt menü başlangıçta gizli */
+.sub__menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #273286;
+  display: none; /* Başlangıçta gizlenmiş */
+  padding: 12px 0; /* Alt menü paddingi genişletildi */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Alt menüye gölge efekti */
+  min-width: 120%; /* Alt menünün genişliği artırıldı */
+  z-index: 1100; /* Alt menünün de üstte görünmesini sağlıyoruz */
+}
+
+/* Alt menü öğeleri */
+.sub__menu-item {
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap; /* Uzun metinler için kayma engeli */
+}
+
+.sub__menu-item:hover {
+  background: #f9a826;
+  color: #fff;
+}
+
+/* Ana menü öğesi üzerine gelindiğinde alt menünün görünmesi */
+.nav__item-container:hover .sub__menu {
+  display: block;
+}
+
+/* Transition efektleri */
+.nav__item-container:hover .sub__menu-item {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
 .main__navbar {
   padding: 15px 0px;
   background: #273286;

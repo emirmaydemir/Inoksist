@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import CommonSection from "../components/UI/CommonSection";
 import Helmet from "../components/Helmet/Helmet";
@@ -12,6 +12,9 @@ import "../styles/about.css";
 
 //HAKKIMIZDA
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); // Boş dizi, sadece bileşen ilk render edildiğinde çalışmasını sağlar
   return (
     <Helmet title="About">
       <CommonSection title="Hakkımızda" />

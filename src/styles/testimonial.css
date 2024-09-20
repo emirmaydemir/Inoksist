@@ -8,6 +8,14 @@
   align-items: center; /* Kart içindeki öğeleri ortalama */
 }
 
+.product-slide img:hover {
+  transform: scale(1.1); /* Hover efekti için resim büyütme */
+}
+
+.product-slide a {
+  text-decoration: none; /* Hover durumda da altını çizme kaldır */
+}
+
 .product-image {
   display: flex;
   justify-content: center; /* Resmi yatayda ortalama */

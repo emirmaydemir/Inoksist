@@ -7,6 +7,7 @@ import Helmet from "../components/Helmet/Helmet";
 import "../styles/price-lists.css";
 
 const PriceList = () => {
+  window.scrollTo(0, 0);
   const navigate = useNavigate();
 
   const handleContactClick = () => {
