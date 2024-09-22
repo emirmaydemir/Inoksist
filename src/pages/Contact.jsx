@@ -1,27 +1,86 @@
-import React, { useEffect } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Form,
-  FormGroup,
-  Input,
-  Card,
-  CardBody,
-} from "reactstrap";
+import React, { useEffect, useState } from "react";
+import { Container, Row, Col, Card, CardBody } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
-
+import emailjs from "@emailjs/browser";
 import "../styles/contact.css";
 import { useTranslation } from "react-i18next";
+import ContactForm from "../components/UI/ContactForm";
+import { toast } from "react-toastify";
 
 //İLETİŞİM
 const Contact = () => {
   const { t } = useTranslation("contact");
   const contactContent = t("contact", { returnObjects: true });
+
+  // --Mail Gönderme--
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  // Form verilerini güncelleme fonksiyonu
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const validateForm = () => {
+    // Form verilerinin tüm alanlarının doldurulup doldurulmadığını kontrol et
+    const emptyFields = Object.keys(formData).filter(
+      (key) => formData[key].trim() === ""
+    );
+    if (emptyFields.length > 0) {
+      toast.error("Lütfen tüm alanları doldurunuz.");
+      return false;
+    }
+    return true;
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (!validateForm()) return; // Form doğrulaması başarısızsa e-posta gönderimini durdur
+    setLoading(true);
+
+    emailjs
+      .send(
+        "service_7lqnnch", // Service ID (EmailJS dashboard'dan alın)
+        "template_g1d4m8m", // Template ID (EmailJS dashboard'dan alın)
+        formData, // Form verileri
+        "s-AQQB-m426dLJyWz" // User ID (EmailJS dashboard'dan alın)
+      )
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        toast.success("Mesaj başarıyla gönderildi!"); // Başarı mesajı
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          subject: "",
+          message: "",
+        }); // Formu temizle
+      })
+      .catch((err) => {
+        console.log("FAILED...", err);
+        toast.error("Mesaj gönderilirken bir hata oluştu."); // Hata mesajı
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+  // --Mail Gönderme--
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []); // Boş dizi, sadece bileşen ilk render edildiğinde çalışmasını sağlar
+
   return (
     <Helmet title={contactContent.title}>
       <CommonSection title={contactContent.title} />
@@ -100,64 +159,13 @@ const Contact = () => {
 
             {/* Sağ Kısım: İletişim Formu */}
             <Col lg="6" md="12" sm="12" className="d-flex align-items-stretch">
-              <div style={{ width: "100%" }}>
-                <h6 className="fw-bold mb-4 contact-form-title">
-                  {contactContent.formTitle}
-                </h6>
-                <Form
-                  className="d-flex flex-column justify-content-between"
-                  style={{ height: "100%" }}
-                >
-                  <FormGroup className="contact__form">
-                    <Input
-                      placeholder={contactContent.formFields.name}
-                      type="text"
-                    />
-                  </FormGroup>
-                  <FormGroup className="contact__form">
-                    <Input
-                      placeholder={contactContent.formFields.email}
-                      type="email"
-                    />
-                  </FormGroup>
-                  <FormGroup className="contact__form">
-                    <Input
-                      placeholder={contactContent.formFields.company}
-                      type="text"
-                    />
-                  </FormGroup>
-                  <FormGroup className="contact__form">
-                    <Input
-                      placeholder={contactContent.formFields.phone}
-                      type="tel"
-                    />
-                  </FormGroup>
-                  <FormGroup className="contact__form">
-                    <Input
-                      placeholder={contactContent.formFields.subject}
-                      type="text"
-                    />
-                  </FormGroup>
-                  <FormGroup className="contact__form">
-                    <textarea
-                      rows="5"
-                      placeholder={contactContent.formFields.message}
-                      style={{
-                        width: "100%",
-                        minHeight: "150px",
-                        padding: "10px",
-                        border: "1px solid #ccc",
-                        borderRadius: "4px",
-                        resize: "vertical",
-                      }}
-                      className="textarea"
-                    ></textarea>
-                  </FormGroup>
-                  <button className="contact__btn" type="submit">
-                    {contactContent.submitButtonText}
-                  </button>
-                </Form>
-              </div>
+              <ContactForm
+                formData={formData}
+                handleChange={handleChange}
+                sendEmail={sendEmail}
+                contactContent={contactContent}
+                loading={loading}
+              />
             </Col>
           </Row>
         </Container>
