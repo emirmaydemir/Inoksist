@@ -5,11 +5,14 @@ import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import ProductItem from "../components/UI/ProductItem";
 import waterData from "../assets/data/waterData";
-import { WaterTankData } from "../assets/data/categoriesData";
 import "../styles/select.css";
+import { useTranslation } from "react-i18next";
 
 //MODÜLER SU DEPOSU
 const WaterTankListing = () => {
+  const { t } = useTranslation("categories");
+  const categoriesContent = t("waterTankData", { returnObjects: true });
+  const headerContent = t("header", { returnObjects: true });
   const { category } = useParams();
 
   // Kategorini Seç
@@ -35,7 +38,7 @@ const WaterTankListing = () => {
 
   return (
     <Helmet title="products2">
-      <CommonSection title="Modüler Su Deposu" />
+      <CommonSection title={headerContent.modular} />
 
       <section>
         <Container>
@@ -52,8 +55,8 @@ const WaterTankListing = () => {
                   aria-label="Kategoriler"
                   value={selectedCategory}
                 >
-                  <option value="">Tüm Kategoriler</option>
-                  {WaterTankData.map((category) => (
+                  <option value="">{headerContent.all}</option>
+                  {categoriesContent.map((category) => (
                     <option value={category.id} key={category.id}>
                       {category.description}
                     </option>

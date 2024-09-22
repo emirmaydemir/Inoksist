@@ -5,11 +5,14 @@ import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import ProductItem from "../components/UI/ProductItem";
 import hardwareData from "../assets/data/hardwareData";
-import { HardwareData } from "../assets/data/categoriesData";
 import "../styles/select.css";
+import { useTranslation } from "react-i18next";
 
 //TEKNİK HIRDAVAT
 const HardwareListing = () => {
+  const { t } = useTranslation("categories");
+  const categoriesContent = t("hardwareData", { returnObjects: true });
+  const headerContent = t("header", { returnObjects: true });
   const { category } = useParams();
 
   // Kategorini Seç
@@ -35,7 +38,7 @@ const HardwareListing = () => {
 
   return (
     <Helmet title="products2">
-      <CommonSection title="Teknik Hırdavat" />
+      <CommonSection title={headerContent.technical} />
 
       <section>
         <Container>
@@ -52,8 +55,8 @@ const HardwareListing = () => {
                   aria-label="Kategoriler"
                   value={selectedCategory}
                 >
-                  <option value="">Tüm Kategoriler</option>
-                  {HardwareData.map((category) => (
+                  <option value="">{headerContent.all}</option>
+                  {categoriesContent.map((category) => (
                     <option value={category.id} key={category.id}>
                       {category.description}
                     </option>

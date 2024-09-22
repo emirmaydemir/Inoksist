@@ -26,8 +26,11 @@ const ProductItem = (props) => {
     <Col lg="4" md="4" sm="6" className="mb-5">
       <div className="product__item">
         <div className="product__img">
-          <Link to={`/${product}/${category}/${name}`}>
-            <img src={imgUrl} alt="" className="w-100" />
+          <Link
+            to={`/${product}/${category}/${name}`}
+            aria-label={`${name} ürününün detay sayfasını görüntüle`}
+          >
+            <img src={imgUrl} alt="Civata" className="w-100" loading="lazy" />
           </Link>
         </div>
 

@@ -1,0 +1,66 @@
+{
+  "navLinks": [
+    {
+      "path": "/home",
+      "display": "Home"
+    },
+    {
+      "path": "/about",
+      "display": "About Us"
+    },
+    {
+      "path": "/products",
+      "display": "Fasteners",
+      "subMenu": [
+        { "path": "/products/1", "display": "Stainless Steel Fasteners" },
+        { "path": "/products/2", "display": "Steel Fasteners" },
+        { "path": "/products/3", "display": "Iron Fasteners" },
+        { "path": "/products/4", "display": "Brass Fasteners" },
+        { "path": "/products/5", "display": "Titanium Fasteners" },
+        { "path": "/products/6", "display": "Custom Manufactured Fasteners" },
+        { "path": "/products/7", "display": "10.9 and 12.9 Fasteners" }
+      ]
+    },
+    {
+      "path": "/products2",
+      "display": "Technical Hardware",
+      "subMenu": [
+        {
+          "path": "/products2/1",
+          "display": "Drilling and Cutting Oils Group"
+        },
+        { "path": "/products2/2", "display": "Safety Equipment Group" },
+        { "path": "/products2/3", "display": "Welding Equipment Group" },
+        { "path": "/products2/4", "display": "Cutting and Abrasives Group" },
+        { "path": "/products2/5", "display": "Packaging and Wrapping Group" },
+        { "path": "/products2/6", "display": "Sealing Group" },
+        { "path": "/products2/7", "display": "Spray Paint" },
+        { "path": "/products2/8", "display": "Construction Chemicals Group" },
+        { "path": "/products2/9", "display": "Adhesives Group" }
+      ]
+    },
+    {
+      "path": "/products3",
+      "display": "Maintenance Chemicals",
+      "subMenu": [
+        { "path": "/products3/1", "display": "Maintenance Chemicals" }
+      ]
+    },
+    {
+      "path": "/products4",
+      "display": "Modular Water Tanks",
+      "subMenu": [{ "path": "/products4/1", "display": "Modular Water Tanks" }]
+    },
+    {
+      "path": "/price",
+      "display": "Price Lists"
+    },
+    {
+      "path": "/contact",
+      "display": "Contact"
+    }
+  ],
+  "search": {
+    "display": "Search"
+  }
+}

@@ -5,11 +5,14 @@ import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import ProductItem from "../components/UI/ProductItem";
 import fastenerData from "../assets/data/fastenerData";
-import { FastenerData } from "../assets/data/categoriesData";
 import "../styles/select.css";
+import { useTranslation } from "react-i18next";
 
 //BAĞLANTI ELEMANLARI
 const FastenerListing = () => {
+  const { t } = useTranslation("categories");
+  const categoriesContent = t("fastenerData", { returnObjects: true });
+  const headerContent = t("header", { returnObjects: true });
   const { category } = useParams();
 
   // Kategorini Seç
@@ -35,7 +38,7 @@ const FastenerListing = () => {
 
   return (
     <Helmet title="products">
-      <CommonSection title="Bağlantı Elemanları" />
+      <CommonSection title={headerContent.fastener} />
 
       <section>
         <Container>
@@ -52,8 +55,8 @@ const FastenerListing = () => {
                   aria-label="Kategoriler"
                   value={selectedCategory}
                 >
-                  <option value="">Tüm Kategoriler</option>
-                  {FastenerData.map((category) => (
+                  <option value="">{headerContent.all}</option>
+                  {categoriesContent.map((category) => (
                     <option value={category.id} key={category.id}>
                       {category.description}
                     </option>

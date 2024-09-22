@@ -9,15 +9,18 @@ import MotivationSection from "../components/UI/MotivationSection";
 import bolt from "../assets/all-images/civata2.jpg";
 import Testimonial from "../components/UI/Testimonial";
 import "../styles/about.css";
+import { useTranslation } from "react-i18next";
 
 //HAKKIMIZDA
 const About = () => {
+  const { t } = useTranslation("aboutpage");
+  const aboutContent = t("about", { returnObjects: true });
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []); // Boş dizi, sadece bileşen ilk render edildiğinde çalışmasını sağlar
   return (
-    <Helmet title="About">
-      <CommonSection title="Hakkımızda" />
+    <Helmet title={aboutContent.title}>
+      <CommonSection title={aboutContent.title} />
       <AboutSection aboutClass="aboutPage" />
 
       <section className="about__page-section">
@@ -25,33 +28,25 @@ const About = () => {
           <Row>
             <Col lg="6" md="6" sm="12">
               <div className="about__page-img">
-                <img src={bolt} alt="" className="w-100 rounded-3" />
+                <img
+                  src={bolt}
+                  alt="Hakkımızda"
+                  className="w-100 rounded-3"
+                  loading="lazy"
+                />
               </div>
             </Col>
 
             <Col lg="6" md="6" sm="12">
               <div className="about__page-content">
-                <h2 className="section__title">
-                  Endüstriyel Çözümlerle Güçlü Bağlantılar Kuruyoruz
-                </h2>
+                <h2 className="section__title">{aboutContent.sectionTitle}</h2>
 
                 <p className="section__description">
-                  İnoksist Endüstri olarak, sektördeki ihtiyaçlara yönelik en
-                  doğru çözümleri sunma konusunda kararlıyız. Müşterilerimizle
-                  kurduğumuz güven temelli ilişkiler, bizi sadece bir tedarikçi
-                  değil, aynı zamanda bir çözüm ortağı yapıyor. Her adımımızda
-                  kaliteyi ön planda tutarak, sektördeki en zorlu talepleri dahi
-                  karşılayabilecek ürünler ve hizmetler geliştirmeyi
-                  sürdürüyoruz.
+                  {aboutContent.sectionDescription1}
                 </p>
 
                 <p className="section__description">
-                  Müşterilerimizin beklentilerini aşmayı hedefliyor, yenilikçi
-                  ve sürdürülebilir üretim anlayışımızla sektörde fark
-                  yaratıyoruz. İnoksist Endüstri olarak, güvenilirlik ve uzun
-                  vadeli başarıya odaklanan bir iş modeli ile iş ortaklarımızın
-                  başarısına değer katıyoruz. vadeli başarıya odaklanan bir iş
-                  modeli ile iş ortaklarımızın başarısına değer katıyoruz.
+                  {aboutContent.sectionDescription2}
                 </p>
 
                 <div className=" d-flex align-items-center gap-3 mt-4">
@@ -60,7 +55,9 @@ const About = () => {
                   </span>
 
                   <div>
-                    <h6 className="section__subtitle">Bize Ulaşın</h6>
+                    <h6 className="section__subtitle">
+                      {aboutContent.sectionSubtitle}
+                    </h6>
                     <h4>+90 (212) 549 70 55</h4>
                   </div>
                 </div>
@@ -76,8 +73,14 @@ const About = () => {
         <Container>
           <Row>
             <Col lg="12" className="mb-4 text-center">
-              <h6 className="section__subtitle">Öne Çıkan Ürünler</h6>
-              <h2 className="section__title">Trend Ürünler</h2>
+              <h6 className="section__subtitle">
+                {" "}
+                {aboutContent.testimonial_title}
+              </h6>
+              <h2 className="section__title">
+                {" "}
+                {aboutContent.testimonial_subtitle}
+              </h2>
             </Col>
 
             <Testimonial />

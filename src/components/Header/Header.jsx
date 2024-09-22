@@ -4,89 +4,43 @@ import { Container, Row, Col } from "reactstrap";
 import { Link, NavLink } from "react-router-dom";
 import "../../styles/header.css";
 import allProducts from "../../assets/data/allProducts";
-
-const navLinks = [
-  {
-    path: "/home",
-    display: "Anasayfa",
-  },
-  {
-    path: "/about",
-    display: "Hakkımızda",
-  },
-  {
-    path: "/products",
-    display: "Bağlantı Elemanları",
-    subMenu: [
-      { path: "/products/1", display: "Paslanmaz Bağlantı Elemanları" },
-      { path: "/products/2", display: "Çelik Bağlantı Elemanları" },
-      { path: "/products/3", display: "Demir Bağlantı Elemanları" },
-      { path: "/products/4", display: "Pirinç Bağlantı Elemanları" },
-      { path: "/products/5", display: "Titanyum Bağlantı Elemanları" },
-      { path: "/products/6", display: "Özel Üretim Bağlantı Elemanları" },
-      { path: "/products/7", display: "10.9 ve 12.9 Bağlantı Elemanları" },
-    ],
-  },
-  {
-    path: "/products2",
-    display: "Teknik Hırdavat",
-    subMenu: [
-      { path: "/products2/1", display: "Delme Kesme Yağları Grubu" },
-      { path: "/products2/2", display: "İş Güvenliği Grubu" },
-      { path: "/products2/3", display: "Kaynak Ekipmanları Grubu" },
-      { path: "/products2/4", display: "Kesici Ve Aşındırıcı Grubu" },
-      { path: "/products2/5", display: "Ambalaj ve Paketleme Grubu" },
-      { path: "/products2/6", display: "Sızdırmazlık Grubu" },
-      { path: "/products2/7", display: "Sprey Boya" },
-      { path: "/products2/8", display: "Yapı Kimyasalları Grubu" },
-      { path: "/products2/9", display: "Yapıştırıcı Grubu" },
-    ],
-  },
-  {
-    path: "/products3",
-    display: "Bakım Kimyasalları",
-    subMenu: [{ path: "/products3/1", display: "Bakım Kimyasalları" }],
-  },
-  {
-    path: "/products4",
-    display: "Modüler Su Deposu",
-    subMenu: [{ path: "/products4/1", display: "Modüler Su Deposu" }],
-  },
-  {
-    path: "/price",
-    display: "Fiyat Listeleri",
-  },
-  {
-    path: "/contact",
-    display: "İletişim",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const socialLinks = [
   {
     url: "#",
     icon: "ri-facebook-line",
+    display: "facebook",
   },
   {
     url: "#",
     icon: "ri-instagram-line",
+    display: "instagram",
   },
   {
     url: "#",
     icon: "ri-linkedin-line",
+    display: "linkedin",
   },
   {
     url: "#",
     icon: "ri-twitter-line",
+    display: "twitter",
   },
 ];
 
 const Header = () => {
-  const menuRef = useRef(null);
-  const [isTurkish, setIsTurkish] = useState(true);
+  const { t, i18n } = useTranslation("navbar");
+  const navLinks = t("navLinks", { returnObjects: true });
+  const search = t("search", { returnObjects: true });
+  // Dil için
+  const toggleLanguage = () => {
+    const newLanguage = i18n.language === "tr" ? "en" : "tr";
+    i18n.changeLanguage(newLanguage);
+  };
 
+  const menuRef = useRef(null);
   const toggleMenu = () => menuRef.current.classList.toggle("menu__active");
-  const toggleFlag = () => setIsTurkish(!isTurkish);
 
   //  --ARAMA İÇİN--
   const [searchTerm, setSearchTerm] = useState("");
@@ -145,6 +99,7 @@ const Header = () => {
                     src={image}
                     alt="İnoksist"
                     className="header__top__logo"
+                    aria-label="Ana Sayfaya Git"
                   />
                 </Link>
                 <span className="header__top__help">
@@ -163,12 +118,13 @@ const Header = () => {
                     to={item.url}
                     key={index}
                     className="d-flex align-items-center gap-1"
+                    aria-label={`${item.display} sayfamızı ziyaret edin`}
                   >
                     <i className={item.icon}></i>
                   </Link>
                 ))}
-                <button onClick={toggleFlag} className="flag-btn">
-                  {isTurkish ? (
+                <button onClick={toggleLanguage} className="flag-btn">
+                  {i18n.language === "tr" ? (
                     <img
                       src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg"
                       alt="Turkish"
@@ -203,6 +159,7 @@ const Header = () => {
                   <div className="nav__item-container" key={index}>
                     <NavLink
                       to={item.path}
+                      aria-label={`${item.display} sayfasına git`}
                       className={(navClass) =>
                         navClass.isActive
                           ? "nav__active nav__item"
@@ -220,6 +177,7 @@ const Header = () => {
                             to={subItem.path}
                             className="sub__menu-item"
                             key={subIndex}
+                            aria-label={`Kategorimizdeki ${subItem.display} sayfasına git`}
                           >
                             {subItem.display}
                           </NavLink>
@@ -236,7 +194,7 @@ const Header = () => {
               <div className="search__box" ref={searchBoxRef}>
                 <input
                   type="text"
-                  placeholder="Arama"
+                  placeholder={search.display}
                   value={searchTerm}
                   onChange={handleSearch}
                 />
@@ -254,6 +212,7 @@ const Header = () => {
                       key={index}
                       className="search-result-card"
                       onClick={() => handleResultClick(product)}
+                      aria-label={`${product.name} ürününün detaylarını görüntüle`}
                     >
                       <img src={product.imgUrl} alt={product.name} />
                       <p>{product.name}</p>

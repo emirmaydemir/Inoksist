@@ -58,18 +58,18 @@ const OurMembers = () => {
               <img src={item.imgUrl} alt="" className="w-100" />
 
               <div className="single__member-social">
-                <Link to={item.fbUrl}>
+                <Link to={item.fbUrl} aria-label="facebook">
                   <i className="ri-facebook-line"></i>
                 </Link>
-                <Link to={item.twitUrl}>
+                <Link to={item.twitUrl} aria-label="twitter">
                   <i className="ri-twitter-line"></i>
                 </Link>
 
-                <Link to={item.linkedinUrl}>
+                <Link to={item.linkedinUrl} aria-label="linkedin">
                   <i className="ri-linkedin-line"></i>
                 </Link>
 
-                <Link to={item.instUrl}>
+                <Link to={item.instUrl} aria-label="instagram">
                   <i className="ri-instagram-line"></i>
                 </Link>
               </div>

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-
 import HeroSlider from "../components/UI/HeroSlider";
 import Helmet from "../components/Helmet/Helmet";
 import sponsor from "../assets/all-images/markalar.jpg";
@@ -9,9 +8,13 @@ import AboutSection from "../components/UI/AboutSection";
 import ServicesList from "../components/UI/ServicesList";
 import MotivationSection from "../components/UI/MotivationSection";
 import Testimonial from "../components/UI/Testimonial";
+import { useTranslation } from "react-i18next";
 
 //ANASAYFA
 const Home = () => {
+  const { t } = useTranslation("service");
+  const homeContent = t("services_title", { returnObjects: true });
+  const testimonialContent = t("testimonial", { returnObjects: true });
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []); // Boş dizi, sadece bileşen ilk render edildiğinde çalışmasını sağlar
@@ -40,8 +43,8 @@ const Home = () => {
         <Container>
           <Row>
             <Col lg="12" className="mb-5 text-center">
-              <h6 className="section__subtitle">Sizin İçin</h6>
-              <h2 className="section__title">Hizmetlerimiz</h2>
+              <h6 className="section__subtitle">{homeContent.title}</h6>
+              <h2 className="section__title">{homeContent.subtitle}</h2>
             </Col>
 
             <ServicesList />
@@ -71,8 +74,8 @@ const Home = () => {
         <Container>
           <Row>
             <Col lg="12" className="mb-4 text-center">
-              <h6 className="section__subtitle">Öne Çıkan Ürünler</h6>
-              <h2 className="section__title">Trend Ürünler</h2>
+              <h6 className="section__subtitle">{testimonialContent.title}</h6>
+              <h2 className="section__title">{testimonialContent.subtitle}</h2>
             </Col>
 
             <Testimonial />

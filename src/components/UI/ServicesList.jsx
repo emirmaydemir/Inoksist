@@ -1,9 +1,11 @@
 import React from "react";
 import { Col } from "reactstrap";
 import "../../styles/services-list.css";
-import servicesData from "../../assets/data/serviceData";
+import { useTranslation } from "react-i18next";
 
 const ServicesList = () => {
+  const { t } = useTranslation("service");
+  const servicesData = t("services", { returnObjects: true });
   return (
     <>
       {servicesData.map((item) => (

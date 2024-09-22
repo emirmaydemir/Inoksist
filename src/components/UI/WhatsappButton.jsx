@@ -10,6 +10,7 @@ const WhatsAppButton = () => {
       target="_blank"
       rel="noopener noreferrer"
       className="whatsapp-button"
+      aria-label="WhatsApp üzerinden bizimle iletişime geçin"
     >
       <i className="ri-whatsapp-line"></i> {/* WhatsApp simgesi */}
     </a>

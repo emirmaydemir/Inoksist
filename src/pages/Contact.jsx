@@ -13,15 +13,18 @@ import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 
 import "../styles/contact.css";
+import { useTranslation } from "react-i18next";
 
 //İLETİŞİM
 const Contact = () => {
+  const { t } = useTranslation("contact");
+  const contactContent = t("contact", { returnObjects: true });
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []); // Boş dizi, sadece bileşen ilk render edildiğinde çalışmasını sağlar
   return (
-    <Helmet title="İletişim">
-      <CommonSection title="İletişim" />
+    <Helmet title={contactContent.title}>
+      <CommonSection title={contactContent.title} />
       <section>
         <Container>
           {/* Üst Kısım: Kart ile Adres, Telefon, Email ve Sosyal Medya */}
@@ -33,7 +36,9 @@ const Contact = () => {
                     {/* Adres */}
                     <Col lg="4" md="12" sm="12" className="mb-3 mb-md-0">
                       <div className="contact__info-box">
-                        <p className="fw-bold">Adres</p>
+                        <p className="fw-bold">
+                          {contactContent.address.label}
+                        </p>
                         <p>
                           Küçükçekmece i.o.s.b. mah. İmsan Sanayi sitesi E 3
                           blok sok no 3 küçükçekmece / İSTANBUL
@@ -44,7 +49,7 @@ const Contact = () => {
                     {/* Telefon */}
                     <Col lg="4" md="12" sm="12" className="mb-3 mb-md-0">
                       <div className="contact__info-box">
-                        <p className="fw-bold">Telefon</p>
+                        <p className="fw-bold"> {contactContent.phone.label}</p>
                         <p>+90 (212) 549 70 55</p>
                       </div>
                     </Col>
@@ -52,7 +57,7 @@ const Contact = () => {
                     {/* Email */}
                     <Col lg="4" md="12" sm="12" className="mb-3 mb-md-0">
                       <div className="contact__info-box">
-                        <p className="fw-bold">E-Mail</p>
+                        <p className="fw-bold"> {contactContent.email.label}</p>
                         <p>info@inoksist.com.tr</p>
                       </div>
                     </Col>
@@ -97,31 +102,46 @@ const Contact = () => {
             <Col lg="6" md="12" sm="12" className="d-flex align-items-stretch">
               <div style={{ width: "100%" }}>
                 <h6 className="fw-bold mb-4 contact-form-title">
-                  İletişim Formu
+                  {contactContent.formTitle}
                 </h6>
                 <Form
                   className="d-flex flex-column justify-content-between"
                   style={{ height: "100%" }}
                 >
                   <FormGroup className="contact__form">
-                    <Input placeholder="Adınız" type="text" />
+                    <Input
+                      placeholder={contactContent.formFields.name}
+                      type="text"
+                    />
                   </FormGroup>
                   <FormGroup className="contact__form">
-                    <Input placeholder="Email" type="email" />
+                    <Input
+                      placeholder={contactContent.formFields.email}
+                      type="email"
+                    />
                   </FormGroup>
                   <FormGroup className="contact__form">
-                    <Input placeholder="Firma Adı" type="text" />
+                    <Input
+                      placeholder={contactContent.formFields.company}
+                      type="text"
+                    />
                   </FormGroup>
                   <FormGroup className="contact__form">
-                    <Input placeholder="Telefon" type="tel" />
+                    <Input
+                      placeholder={contactContent.formFields.phone}
+                      type="tel"
+                    />
                   </FormGroup>
                   <FormGroup className="contact__form">
-                    <Input placeholder="Konu" type="text" />
+                    <Input
+                      placeholder={contactContent.formFields.subject}
+                      type="text"
+                    />
                   </FormGroup>
                   <FormGroup className="contact__form">
                     <textarea
                       rows="5"
-                      placeholder="Mesajınız"
+                      placeholder={contactContent.formFields.message}
                       style={{
                         width: "100%",
                         minHeight: "150px",
@@ -134,7 +154,7 @@ const Contact = () => {
                     ></textarea>
                   </FormGroup>
                   <button className="contact__btn" type="submit">
-                    Gönder
+                    {contactContent.submitButtonText}
                   </button>
                 </Form>
               </div>

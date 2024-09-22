@@ -1,0 +1,89 @@
+{
+  "fastenerData": [
+    {
+      "id": 1,
+      "description": "Paslanmaz Bağlantı Elemanları"
+    },
+    {
+      "id": 2,
+      "description": "Çelik Bağlantı Elemanları"
+    },
+    {
+      "id": 3,
+      "description": "Demir Bağlantı Elemanları"
+    },
+    {
+      "id": 4,
+      "description": "Pirinç Bağlantı Elemanları"
+    },
+    {
+      "id": 5,
+      "description": "Titanyum Bağlantı Elemanları"
+    },
+    {
+      "id": 6,
+      "description": "Özel Üretim Bağlantı Elemanları"
+    },
+    {
+      "id": 7,
+      "description": "10.9 ve 12.9 Bağlantı Elemanları"
+    }
+  ],
+  "hardwareData": [
+    {
+      "id": 1,
+      "description": "Delme Kesme Yağları Grubu"
+    },
+    {
+      "id": 2,
+      "description": "İş Güvenliği Grubu"
+    },
+    {
+      "id": 3,
+      "description": "Kaynak Ekipmanları Grubu"
+    },
+    {
+      "id": 4,
+      "description": "Kesici Ve Aşındırıcı Grubu"
+    },
+    {
+      "id": 5,
+      "description": "Ambalaj ve Paketleme Grubu"
+    },
+    {
+      "id": 6,
+      "description": "Sızdırmazlık Grubu"
+    },
+    {
+      "id": 7,
+      "description": "Sprey Boya"
+    },
+    {
+      "id": 8,
+      "description": "Yapı Kimyasalları Grubu"
+    },
+    {
+      "id": 9,
+      "description": "Yapıştırıcı Grubu"
+    }
+  ],
+  "chemicalData": [
+    {
+      "id": 1,
+      "description": "Bakım Kimyasalları"
+    }
+  ],
+  "waterTankData": [
+    {
+      "id": 1,
+      "description": "Modüler Su Deposu"
+    }
+  ],
+  "header": {
+    "all": "Tüm Kategoriler",
+    "fastener": "Bağlantı Elemanları",
+    "technical": "Teknik Hırdavat",
+    "maintenance": "Bakım Kimyasalları",
+    "modular": "Modüler Su Deposu"
+  }
+}

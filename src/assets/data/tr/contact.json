@@ -1,0 +1,24 @@
+{
+  "contact": {
+    "title": "İletişim",
+    "address": {
+      "label": "Adres"
+    },
+    "phone": {
+      "label": "Telefon"
+    },
+    "email": {
+      "label": "E-Mail"
+    },
+    "formTitle": "İletişim Formu",
+    "formFields": {
+      "name": "Adınız",
+      "email": "E-Mail",
+      "company": "Firma Adı",
+      "phone": "Telefon",
+      "subject": "Konu",
+      "message": "Mesajınız"
+    },
+    "submitButtonText": "Gönder"
+  }
+}

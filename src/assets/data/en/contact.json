@@ -1,0 +1,24 @@
+{
+  "contact": {
+    "title": "Contact",
+    "address": {
+      "label": "Address"
+    },
+    "phone": {
+      "label": "Phone"
+    },
+    "email": {
+      "label": "E-Mail"
+    },
+    "formTitle": "Contact Form",
+    "formFields": {
+      "name": "Your Name",
+      "email": "Email",
+      "company": "Company Name",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Your Message"
+    },
+    "submitButtonText": "Send"
+  }
+}

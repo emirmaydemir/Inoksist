@@ -1,22 +1,13 @@
 // Bakım Kimyasalları
-import img01 from "../all-images/Chemical/Bakim/1.jpg";
-import img02 from "../all-images/Chemical/Bakim/2.jpg";
-import img03 from "../all-images/Chemical/Bakim/3.jpg";
-import img04 from "../all-images/Chemical/Bakim/4.jpg";
-import img05 from "../all-images/Chemical/Bakim/5.jpg";
-import img06 from "../all-images/Chemical/Bakim/6.jpg";
-import img07 from "../all-images/Chemical/Bakim/7.jpg";
-import img08 from "../all-images/Chemical/Bakim/8.jpg";
-import img09 from "../all-images/Chemical/Bakim/9.jpg";
-import img10 from "../all-images/Chemical/Bakim/10.jpg";
+import { Chemical_img_urls } from "./imageUrls";
 
 const chemicalData = [
   // --Bakım Kimyasalları--
   {
     id: 1,
     name: "Kalıp Ayırıcı Sprey (Silikonlu / Silikonsuz)",
-    images: [img01], // Resim URL'leri dizisi
-    imgUrl: img01,
+    images: [Chemical_img_urls.img01], // Resim URL'leri dizisi
+    imgUrl: Chemical_img_urls.img01,
     categoryId: 1,
     category: "chemicalData",
     description:
@@ -25,8 +16,8 @@ const chemicalData = [
   {
     id: 2,
     name: "Fren Balata Endüstriyel Temizleyici",
-    images: [img02], // Resim URL'leri dizisi
-    imgUrl: img02,
+    images: [Chemical_img_urls.img02], // Resim URL'leri dizisi
+    imgUrl: Chemical_img_urls.img02,
     categoryId: 1,
     category: "chemicalData",
     description:
@@ -35,8 +26,8 @@ const chemicalData = [
   {
     id: 3,
     name: "Sıvı Gres",
-    images: [img03], // Resim URL'leri dizisi
-    imgUrl: img03,
+    images: [Chemical_img_urls.img03], // Resim URL'leri dizisi
+    imgUrl: Chemical_img_urls.img03,
     categoryId: 1,
     category: "chemicalData",
     description:
@@ -45,8 +36,8 @@ const chemicalData = [
   {
     id: 4,
     name: "Gazaltı Kaynak Spreyi (Silikonsuz)",
-    images: [img04], // Resim URL'leri dizisi
-    imgUrl: img04,
+    images: [Chemical_img_urls.img04], // Resim URL'leri dizisi
+    imgUrl: Chemical_img_urls.img04,
     categoryId: 1,
     category: "chemicalData",
     description:
@@ -55,8 +46,8 @@ const chemicalData = [
   {
     id: 5,
     name: "Pas Sökücü",
-    images: [img05], // Resim URL'leri dizisi
-    imgUrl: img05,
+    images: [Chemical_img_urls.img05], // Resim URL'leri dizisi
+    imgUrl: Chemical_img_urls.img05,
     categoryId: 1,
     category: "chemicalData",
     description:
@@ -65,8 +56,8 @@ const chemicalData = [
   {
     id: 6,
     name: "W 44 T® Multi Sprey",
-    images: [img06], // Resim URL'leri dizisi
-    imgUrl: img06,
+    images: [Chemical_img_urls.img06], // Resim URL'leri dizisi
+    imgUrl: Chemical_img_urls.img06,
     categoryId: 1,
     category: "chemicalData",
     description:
@@ -75,8 +66,8 @@ const chemicalData = [
   {
     id: 7,
     name: "Paslanmaz Çelik-Sprey - özel açık",
-    images: [img07], // Resim URL'leri dizisi
-    imgUrl: img07,
+    images: [Chemical_img_urls.img07], // Resim URL'leri dizisi
+    imgUrl: Chemical_img_urls.img07,
     categoryId: 1,
     category: "chemicalData",
     description:
@@ -85,8 +76,8 @@ const chemicalData = [
   {
     id: 8,
     name: "Alüminyum Sprey A-400 - parlak",
-    images: [img08], // Resim URL'leri dizisi
-    imgUrl: img08,
+    images: [Chemical_img_urls.img08], // Resim URL'leri dizisi
+    imgUrl: Chemical_img_urls.img08,
     categoryId: 1,
     category: "chemicalData",
     description:
@@ -95,8 +86,8 @@ const chemicalData = [
   {
     id: 9,
     name: "Paslanmaz Çelik Bakım Spreyi",
-    images: [img09], // Resim URL'leri dizisi
-    imgUrl: img09,
+    images: [Chemical_img_urls.img09], // Resim URL'leri dizisi
+    imgUrl: Chemical_img_urls.img09,
     categoryId: 1,
     category: "chemicalData",
     description:
@@ -105,8 +96,8 @@ const chemicalData = [
   {
     id: 10,
     name: "Çinko Sprey",
-    images: [img10], // Resim URL'leri dizisi
-    imgUrl: img10,
+    images: [Chemical_img_urls.img10], // Resim URL'leri dizisi
+    imgUrl: Chemical_img_urls.img10,
     categoryId: 1,
     category: "chemicalData",
     description:

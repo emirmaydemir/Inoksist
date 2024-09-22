@@ -5,8 +5,11 @@ import priceImg from "../assets/all-images/price.jpg";
 import Helmet from "../components/Helmet/Helmet";
 
 import "../styles/price-lists.css";
+import { useTranslation } from "react-i18next";
 
 const PriceList = () => {
+  const { t } = useTranslation("price");
+  const priceContent = t("priceList", { returnObjects: true });
   window.scrollTo(0, 0);
   const navigate = useNavigate();
 
@@ -23,20 +26,26 @@ const PriceList = () => {
               <div className="price-details-card">
                 <Row>
                   <Col md="6" className="image-col">
-                    <img src={priceImg} alt="Price" className="img-fluid" />
+                    <img
+                      src={priceImg}
+                      alt="Price"
+                      className="img-fluid"
+                      loading="lazy"
+                    />
                   </Col>
                   <Col md="6" className="content-col">
-                    <h2 className="price-title">Fiyat Listeleri</h2>
+                    <h2 className="price-title">{priceContent.title}</h2>
                     <p className="price-description">
-                      Güncel Fiyat için lütfen <strong>İLETİŞİME</strong>{" "}
-                      geçiniz.
+                      {priceContent.description}{" "}
+                      <strong>{priceContent.strongDescription}</strong>{" "}
+                      {priceContent.description2}
                     </p>
                     <Button
                       color="primary"
                       className="contact-button"
                       onClick={handleContactClick}
                     >
-                      İletişime Geç
+                      {priceContent.buttonText}
                     </Button>
                   </Col>
                 </Row>

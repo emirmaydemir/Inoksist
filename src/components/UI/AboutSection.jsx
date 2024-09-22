@@ -2,8 +2,11 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import "../../styles/about-section.css";
 import aboutImg from "../../assets/all-images/civata3.jpg";
+import { useTranslation } from "react-i18next";
 
 const AboutSection = ({ aboutClass }) => {
+  const { t } = useTranslation("about");
+  const aboutContent = t("aboutSection", { returnObjects: true });
   return (
     <section
       className="about__section"
@@ -17,52 +20,57 @@ const AboutSection = ({ aboutClass }) => {
         <Row>
           <Col lg="6" md="6">
             <div className="about__section-content">
-              <h4 className="section__subtitle">Hakkımızda</h4>
-              <h2 className="section__title">
-                İnoksist Endüstri'ye Hoşgeldiniz
-              </h2>
-              <p className="section__description">
-                2013 yılında temelleri atılan İnoksist Endüstri geçmişten gelen
-                bilgi birikimi ve ürün tecrübesi ile bağlantı elemanları ve
-                endüstriyel ürünler alanında kısa süre içerisinde sektörde
-                kendisine önemli bir yer edinmiştir. İnoksist Endüstrinin bu
-                gelişiminin arkasında müşteri odaklı ve bir tedarikçiden ziyade
-                bir çözüm ortağı olmayı ilke edinen bir yönetim anlayışı vardır.
-                Hizmet verdiği tüm alanlarda sorumlulukların bilincinde olan
-                İnoksist Endüstri, faaliyetini her zaman için müşteri
-                memnuniyeti ve en önemlisi ‘’güven’’ ilkesini temel alarak
-                sürdürmektedir…
-              </p>
+              <h4 className="section__subtitle">{aboutContent.subtitle}</h4>
+              <h2 className="section__title">{aboutContent.title}</h2>
+              <p className="section__description">{aboutContent.description}</p>
 
-              <div className="about__section-item d-flex align-items-center">
-                <p className="section__description d-flex align-items-center gap-2">
-                  <i className="ri-checkbox-circle-line"></i> Yüksek Kalite
-                  Standartları
-                </p>
+              <Row className="mb-2">
+                {" "}
+                {/* İlk iki öğe */}
+                <Col lg="6" md="6">
+                  <div className="about__section-item d-flex align-items-center">
+                    <p className="section__description d-flex align-items-center gap-2">
+                      <i className="ri-checkbox-circle-line"></i>{" "}
+                      {aboutContent.items[0]}
+                    </p>
+                  </div>
+                </Col>
+                <Col lg="6" md="6">
+                  <div className="about__section-item d-flex align-items-center">
+                    <p className="section__description d-flex align-items-center gap-2">
+                      <i className="ri-checkbox-circle-line"></i>{" "}
+                      {aboutContent.items[1]}
+                    </p>
+                  </div>
+                </Col>
+              </Row>
 
-                <p className="section__description d-flex align-items-center gap-2">
-                  <i className="ri-checkbox-circle-line"></i> Geniş Ürün
-                  Yelpazesi
-                </p>
-              </div>
-
-              <div className="about__section-item d-flex align-items-center">
-                <p className="section__description d-flex align-items-center gap-2">
-                  <i className="ri-checkbox-circle-line"></i> Müşteri Odaklı
-                  Hizmet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </p>
-
-                <p className="section__description d-flex align-items-center gap-2">
-                  <i className="ri-checkbox-circle-line"></i> Hızlı ve Güvenilir
-                  Teslimat
-                </p>
-              </div>
+              <Row>
+                {" "}
+                {/* Son iki öğe */}
+                <Col lg="6" md="6">
+                  <div className="about__section-item d-flex align-items-center">
+                    <p className="section__description d-flex align-items-center gap-2">
+                      <i className="ri-checkbox-circle-line"></i>{" "}
+                      {aboutContent.items[2]}
+                    </p>
+                  </div>
+                </Col>
+                <Col lg="6" md="6">
+                  <div className="about__section-item d-flex align-items-center">
+                    <p className="section__description d-flex align-items-center gap-2">
+                      <i className="ri-checkbox-circle-line"></i>{" "}
+                      {aboutContent.items[3]}
+                    </p>
+                  </div>
+                </Col>
+              </Row>
             </div>
           </Col>
 
           <Col lg="6" md="6">
             <div className="about__img">
-              <img src={aboutImg} alt="" className="w-100" />
+              <img src={aboutImg} alt="" className="w-100" loading="lazy" />
             </div>
           </Col>
         </Row>

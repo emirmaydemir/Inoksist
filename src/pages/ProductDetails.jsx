@@ -53,6 +53,7 @@ const ProductDetails = () => {
                 src={mainImage}
                 alt="Main Product"
                 className="w-100 main-image"
+                loading="lazy"
               />
               {/* Küçük kartlar */}
               <div className="thumbnail-container mt-3 d-flex justify-content-center">
@@ -63,6 +64,7 @@ const ProductDetails = () => {
                     alt={`Thumbnail ${index}`}
                     className="img-thumbnail custom-thumbnail"
                     onClick={() => handleImageClick(imgUrl)}
+                    loading="lazy"
                   />
                 ))}
               </div>
@@ -93,6 +95,7 @@ const ProductDetails = () => {
                               src={drawing}
                               alt={`Technical Drawing ${index + 1}`}
                               className="technical-drawing"
+                              loading="lazy"
                             />
                           </div>
                         )

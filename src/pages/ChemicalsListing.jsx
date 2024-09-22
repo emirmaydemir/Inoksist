@@ -5,11 +5,14 @@ import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import ProductItem from "../components/UI/ProductItem";
 import chemicalData from "../assets/data/chemicalData";
-import { ChemicalData } from "../assets/data/categoriesData";
 import "../styles/select.css";
+import { useTranslation } from "react-i18next";
 
 //BAKIM KİMYASALLARI
 const ChemicalsListing = () => {
+  const { t } = useTranslation("categories");
+  const categoriesContent = t("chemicalData", { returnObjects: true });
+  const headerContent = t("header", { returnObjects: true });
   const { category } = useParams();
 
   // Kategorini Seç
@@ -35,7 +38,7 @@ const ChemicalsListing = () => {
 
   return (
     <Helmet title="products3">
-      <CommonSection title="Bakım Kimyasalları" />
+      <CommonSection title={headerContent.maintenance} />
 
       <section>
         <Container>
@@ -52,8 +55,8 @@ const ChemicalsListing = () => {
                   aria-label="Kategoriler"
                   value={selectedCategory}
                 >
-                  <option value="">Tüm Kategoriler</option>
-                  {ChemicalData.map((category) => (
+                  <option value="">{headerContent.all}</option>
+                  {categoriesContent.map((category) => (
                     <option value={category.id} key={category.id}>
                       {category.description}
                     </option>

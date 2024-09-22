@@ -1,0 +1,72 @@
+{
+  "footer": {
+    "quickLinks": [
+      {
+        "path": "/products",
+        "display": "Fasteners"
+      },
+      {
+        "path": "/products2",
+        "display": "Technical Hardware"
+      },
+      {
+        "path": "/products3",
+        "display": "Maintenance Chemicals"
+      },
+      {
+        "path": "/products4",
+        "display": "Modular Water Tank"
+      },
+      {
+        "path": "/contact",
+        "display": "Price Lists"
+      }
+    ],
+    "socialLinks": [
+      {
+        "url": "#",
+        "icon": "ri-facebook-line",
+        "display": "Facebook"
+      },
+      {
+        "url": "#",
+        "icon": "ri-instagram-line",
+        "display": "Instagram"
+      },
+      {
+        "url": "#",
+        "icon": "ri-linkedin-line",
+        "display": "LinkedIn"
+      },
+      {
+        "url": "#",
+        "icon": "ri-twitter-line",
+        "display": "Twitter"
+      }
+    ],
+    "info": {
+      "title": "Inoksist Industry",
+      "description": "Inoksist Industry proudly offers high-quality stainless steel fasteners and fittings for industrial solutions. We prioritize customer satisfaction by providing reliable and durable products with our experience. Inoksist, the address of quality and trust, is always by your side."
+    },
+    "categories": {
+      "title": "CATEGORIES"
+    },
+    "contactInfo": {
+      "title": "CONTACT INFORMATION",
+      "address": "İ.O.S.B. mah. İmsan Sanayi sitesi E 3 blok sok no 3 küçükçekmece / İSTANBUL",
+      "phone": "Phone:",
+      "email": "E-Mail:",
+      "hours": "Working Hours:"
+    },
+    "getInTouch": {
+      "title": "GET IN TOUCH",
+      "description": "Contact Us"
+    },
+    "social": {
+      "title": "SOCIAL MEDIA"
+    },
+    "footerBottom": {
+      "text": "All Rights Reserved"
+    }
+  }
+}

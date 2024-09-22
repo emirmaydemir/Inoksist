@@ -1,0 +1,72 @@
+{
+  "footer": {
+    "quickLinks": [
+      {
+        "path": "/products",
+        "display": "Bağlantı Elemanları"
+      },
+      {
+        "path": "/products2",
+        "display": "Teknik Hırdavat"
+      },
+      {
+        "path": "/products3",
+        "display": "Bakım Kimyasalları"
+      },
+      {
+        "path": "/products4",
+        "display": "Modüler Su Deposu"
+      },
+      {
+        "path": "/contact",
+        "display": "Fiyat Listeleri"
+      }
+    ],
+    "socialLinks": [
+      {
+        "url": "#",
+        "icon": "ri-facebook-line",
+        "display": "facebook"
+      },
+      {
+        "url": "#",
+        "icon": "ri-instagram-line",
+        "display": "instagram"
+      },
+      {
+        "url": "#",
+        "icon": "ri-linkedin-line",
+        "display": "linkedin"
+      },
+      {
+        "url": "#",
+        "icon": "ri-twitter-line",
+        "display": "twitter"
+      }
+    ],
+    "info": {
+      "title": "İnoksist Endüstri",
+      "description": "İnoksist Endüstri Paslanmaz Civata ve Somon, yüksek kaliteli paslanmaz civata ve somon ürünleri ile endüstriyel çözümler sunmaktan gurur duyar. Deneyimimizle güvenilir ve dayanıklı ürünler sunarak, müşteri memnuniyetini ön planda tutarız. Kalite ve güvenin adresi Inoksist, her zaman yanınızda."
+    },
+    "categories": {
+      "title": "KATEGORİLER"
+    },
+    "contactInfo": {
+      "title": "İLETİŞİM BİLGİLERİ",
+      "address": "İ.O.S.B. mah. İmsan Sanayi sitesi E 3 blok sok no 3 küçükçekmece / İSTANBUL",
+      "phone": "Telefon:",
+      "email": "E-Mail:",
+      "hours": "Çalışma Saatleri:"
+    },
+    "getInTouch": {
+      "title": "BİZE ULAŞIN",
+      "description": "Bizimle İletişime Geçin"
+    },
+    "social": {
+      "title": "SOSYAL MEDYA"
+    },
+    "footerBottom": {
+      "text": "Tüm Hakları saklıdır"
+    }
+  }
+}

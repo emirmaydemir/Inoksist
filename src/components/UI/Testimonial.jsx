@@ -1,13 +1,16 @@
 import React from "react";
 import Slider from "react-slick";
 import "../../styles/testimonial.css";
-
 import productImage1 from "../../assets/all-images/Fastener/1.jpg";
 import productImage2 from "../../assets/all-images/Fastener/2.jpg";
 import productImage3 from "../../assets/all-images/Fastener/11.jpg";
 import productImage4 from "../../assets/all-images/Fastener/7.jpg";
+import { useTranslation } from "react-i18next";
 
 const Testimonial = () => {
+  const { t } = useTranslation("testimonial");
+  const testimonialData = t("testimonials", { returnObjects: true });
+  const images = [productImage1, productImage2, productImage3, productImage4];
   const settings = {
     dots: true,
     infinite: true,
@@ -41,49 +44,20 @@ const Testimonial = () => {
 
   return (
     <Slider {...settings}>
-      <div className="product-slide py-4 px-3">
-        <div className="product-image mb-3">
-          <img src={productImage1} alt="Product 1" className="img-fluid" />
+      {testimonialData.map((item, index) => (
+        <div key={item.id} className="product-slide py-4 px-3">
+          <div className="product-image mb-3">
+            <img
+              src={images[index]}
+              alt={`Product ${item.id}`}
+              className="img-fluid"
+              loading="lazy"
+            />
+          </div>
+          <h5 className="product-title mb-2">{item.title}</h5>
+          <p className="product-description">{item.description}</p>
         </div>
-        <h5 className="product-title mb-2">DIN 933 Altı Köşe Cıvata A2</h5>
-        <p className="product-description">
-          Kısa açıklama metni buraya gelecek. Ürünün en önemli özelliklerini
-          özetleyeceğiz.
-        </p>
-      </div>
-
-      <div className="product-slide py-4 px-3">
-        <div className="product-image mb-3">
-          <img src={productImage2} alt="Product 2" className="img-fluid" />
-        </div>
-        <h5 className="product-title mb-2">DIN/ISO 7380 Bombe Başlı İmb. A2</h5>
-        <p className="product-description">
-          Kısa açıklama metni buraya gelecek. Ürünün en önemli özelliklerini
-          özetleyeceğiz.
-        </p>
-      </div>
-
-      <div className="product-slide py-4 px-3">
-        <div className="product-image mb-3">
-          <img src={productImage3} alt="Product 3" className="img-fluid" />
-        </div>
-        <h5 className="product-title mb-2">DIN 916 Setiskur Cıvata A2</h5>
-        <p className="product-description">
-          Kısa açıklama metni buraya gelecek. Ürünün en önemli özelliklerini
-          özetleyeceğiz.
-        </p>
-      </div>
-
-      <div className="product-slide py-4 px-3">
-        <div className="product-image mb-3">
-          <img src={productImage4} alt="Product 4" className="img-fluid" />
-        </div>
-        <h5 className="product-title mb-2">DIN 976 Gijon A2</h5>
-        <p className="product-description">
-          Kısa açıklama metni buraya gelecek. Ürünün en önemli özelliklerini
-          özetleyeceğiz.
-        </p>
-      </div>
+      ))}
     </Slider>
   );
 };
