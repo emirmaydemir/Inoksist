@@ -6,9 +6,9 @@ import { Container, Row, Col } from "reactstrap";
 import "../styles/find-product-form.css";
 import AboutSection from "../components/UI/AboutSection";
 import ServicesList from "../components/UI/ServicesList";
-import MotivationSection from "../components/UI/MotivationSection";
 import Testimonial from "../components/UI/Testimonial";
 import { useTranslation } from "react-i18next";
+import TrendyolSection from "../components/UI/TrendyolSection";
 
 //ANASAYFA
 const Home = () => {
@@ -67,7 +67,7 @@ const Home = () => {
         </Container>
       </section>*/}
       {/* =========== become a driver section ============ */}
-      <MotivationSection />
+      <TrendyolSection />
 
       {/* =========== testimonial section =========== */}
       <section>

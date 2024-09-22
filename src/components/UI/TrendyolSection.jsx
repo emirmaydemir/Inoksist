@@ -1,18 +1,15 @@
 import React from "react";
 import "../../styles/become-motivation.css";
 import { Container, Row, Col } from "reactstrap";
-import { useNavigate } from "react-router-dom";
 import driverImg from "../../assets/all-images/civata2.jpg";
 import { useTranslation } from "react-i18next";
 
-const MotivationSection = () => {
+const TrendyolSection = () => {
   const { t } = useTranslation("motivation");
-  const motivationData = t("motivationSection", { returnObjects: true });
-  const navigate = useNavigate();
+  const motivationData = t("trendyolSection", { returnObjects: true });
 
   const handleClick = () => {
-    window.scrollTo(0, 0);
-    navigate("/contact");
+    window.open("https://www.trendyol.com/inoksist", "_blank");
   };
 
   return (
@@ -41,4 +38,4 @@ const MotivationSection = () => {
   );
 };
 
-export default MotivationSection;
+export default TrendyolSection;
