@@ -8,24 +8,24 @@ import { useTranslation } from "react-i18next";
 
 const socialLinks = [
   {
-    url: "#",
-    icon: "ri-facebook-line",
-    display: "facebook",
+    url: "https://www.trendyol.com/inoksist",
+    icon: "ri-shopping-cart-line",
+    display: "trendyol",
   },
   {
-    url: "#",
+    url: "https://www.instagram.com/inoksistendustriyel/",
     icon: "ri-instagram-line",
     display: "instagram",
   },
   {
-    url: "#",
+    url: "https://www.linkedin.com/inoksist/",
     icon: "ri-linkedin-line",
     display: "linkedin",
   },
   {
-    url: "#",
-    icon: "ri-twitter-line",
-    display: "twitter",
+    url: "https://maps.app.goo.gl/1Fprbr4QfXuRa9j76",
+    icon: "ri-map-pin-line",
+    display: "maps",
   },
 ];
 
@@ -102,26 +102,31 @@ const Header = () => {
                     aria-label="Ana Sayfaya Git"
                   />
                 </Link>
-                <span className="header__top__help">
+                <a
+                  href="mailto:info@inoksist.com.tr"
+                  className="header__top__help"
+                >
                   <i className="ri-mail-fill"></i> info@inoksist.com.tr
-                </span>
-                <span className="header__top__help">
+                </a>
+                <a href="tel:+902125497055" className="header__top__help">
                   <i className="ri-phone-fill"></i> +90 (212) 549 70 55
-                </span>
+                </a>
               </div>
             </Col>
 
             <Col lg="4" md="4" sm="4">
               <div className="header__top__right d-flex align-items-center justify-content-end gap-4">
                 {socialLinks.map((item, index) => (
-                  <Link
-                    to={item.url}
+                  <a
+                    href={item.url}
                     key={index}
                     className="d-flex align-items-center gap-1"
                     aria-label={`${item.display} sayfamızı ziyaret edin`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <i className={item.icon}></i>
-                  </Link>
+                  </a>
                 ))}
                 <button onClick={toggleLanguage} className="flag-btn">
                   {i18n.language === "tr" ? (

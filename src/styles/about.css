@@ -9,3 +9,8 @@
     display: none;
   }
 }
+
+.contact__info-link {
+  text-decoration: none; /* Altını çizme efektini kaldırır */
+  color: inherit; /* Metnin mevcut rengini korur */
+}

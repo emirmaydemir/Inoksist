@@ -79,10 +79,12 @@
   color: #fff;
   border: none;
   outline: none;
+  flex: 1;
 }
 
-.newsletter span i {
-  color: #fff;
+.newsletter-link {
+  text-decoration: none;
+  color: white;
 }
 
 .footer__bottom {
@@ -100,7 +102,7 @@
   color: #f1ee32; /* Hover durumunda ikon rengini değiştir */
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
   .footer__logo-content {
     font-size: 0.8rem;
   }
@@ -116,7 +118,14 @@
     margin-top: 18px;
   }
 
+  .section__description {
+    flex-direction: column; /* Dikey hizalama */
+  }
+
+  .section__description span {
+    margin: 5px 0; /* Aralarındaki boşluğu artırır */
+  }
   .footer__bottom p {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 }

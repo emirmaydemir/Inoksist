@@ -37,7 +37,7 @@ const Contact = () => {
       (key) => formData[key].trim() === ""
     );
     if (emptyFields.length > 0) {
-      toast.error("Lütfen tüm alanları doldurunuz.");
+      toast.error(contactContent.toast.warning);
       return false;
     }
     return true;
@@ -56,8 +56,7 @@ const Contact = () => {
         "s-AQQB-m426dLJyWz" // User ID (EmailJS dashboard'dan alın)
       )
       .then((response) => {
-        console.log("SUCCESS!", response.status, response.text);
-        toast.success("Mesaj başarıyla gönderildi!"); // Başarı mesajı
+        toast.success(contactContent.toast.success); // Başarı mesajı
         setFormData({
           name: "",
           email: "",
@@ -68,8 +67,7 @@ const Contact = () => {
         }); // Formu temizle
       })
       .catch((err) => {
-        console.log("FAILED...", err);
-        toast.error("Mesaj gönderilirken bir hata oluştu."); // Hata mesajı
+        toast.error(contactContent.toast.failed); // Hata mesajı
       })
       .finally(() => {
         setLoading(false);
@@ -109,7 +107,7 @@ const Contact = () => {
                     <Col lg="4" md="12" sm="12" className="mb-3 mb-md-0">
                       <div className="contact__info-box">
                         <p className="fw-bold"> {contactContent.phone.label}</p>
-                        <p>+90 (212) 549 70 55</p>
+                        <a href="tel:+902125497055">+90 (212) 549 70 55</a>
                       </div>
                     </Col>
 
@@ -117,7 +115,9 @@ const Contact = () => {
                     <Col lg="4" md="12" sm="12" className="mb-3 mb-md-0">
                       <div className="contact__info-box">
                         <p className="fw-bold"> {contactContent.email.label}</p>
-                        <p>info@inoksist.com.tr</p>
+                        <a href="mailto:info@inoksist.com.tr">
+                          info@inoksist.com.tr
+                        </a>
                       </div>
                     </Col>
                   </Row>

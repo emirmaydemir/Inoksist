@@ -108,6 +108,7 @@ import img100 from "../all-images/Fastener/Titanyum/1.jpg";
 
 //Özel Üretim Bağlantı Elemanları Resimleri
 import img101 from "../all-images/Fastener/Ozel/1.jpg";
+import imgx from "../all-images/xxx.png";
 
 const fastenerData = [
   // --Paslanmaz Bağlantı Elemanları--
@@ -116,7 +117,7 @@ const fastenerData = [
     name: "DIN 933 Altı Köşe Cıvata A2",
     title2: "Altı Köşe Cıvata A2",
     title3: "Deneme test",
-    images: [img01], // Resim URL'leri dizisi
+    images: [img01, imgx], // Resim URL'leri dizisi
     imgUrl: img01,
     categoryId: 1,
     category: "fastenerData",
@@ -124,22 +125,22 @@ const fastenerData = [
       "DIN 933 Altı Köşe Cıvata A2, paslanmaz çelikten üretilmiş, tam dişli bir altı köşe başlı cıvatadır. DIN 933 standardına uygun olarak üretilen bu cıvata, A2 kalite paslanmaz çelikten yapılmış olup, korozyona dayanıklılığı sayesinde özellikle nemli veya dış ortam koşullarında uzun süre kullanılabilir. Bu tür cıvatalar, genellikle makine, inşaat ve yapı endüstrilerinde kullanılan, yüksek mukavemet ve dayanıklılık gerektiren uygulamalar için tercih edilir.",
     specifications: [
       {
-        headers: ["Uzunluk", "Çap", "Malzeme", "Standart"],
+        headers: ["", "M4", "M5", "M6", "M8", "M10", "M12","M14", "M16", "M18","M20", "M22", "M24"],
         data: [
-          ["30 mm", "5 mm", "Paslanmaz Çelik", "DIN 933"],
-          ["50 mm", "6 mm", "Paslanmaz Çelik", "DIN 933"],
+          ["k max.", "2,8", "3,5", "4,0", "5,3", "6,4", "7,5", "8,8", "10,0", "11,5", "12,5", "14,0", "15,0"],
+          ["s.", "7", "8", "10", "13", "17", "19", "22", "24", "27", "30", "32", "36"],
+          ["e", "7,66", "8,79", "11,05", "14,38", "18,90", "21,10", "24,49", "26,75", "30,14", "33,53", "35,72", "39,98"],
         ],
       },
-      {
+     /* {
         title: "Fiziksel Özellikler",
         headers: ["Ağırlık", "Mukavemet", "Korozyon Dayanıklılığı"],
         data: [
           ["100 g", "Yüksek", "Yüksek"],
           ["150 g", "Orta", "Orta"],
         ],
-      },
+      },*/
     ],
-    technicalDrawings: [img01, img01],
   },
   {
     id: 2,

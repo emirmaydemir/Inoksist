@@ -1,27 +1,40 @@
-.main-image {
-  border-radius: 10px;
+/*ÜST TARAF*/
+.main-image-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
   height: 400px;
-  object-fit: cover;
+  border-radius: 10px;
+  cursor: zoom-in;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.1s ease;
 }
 
 .thumbnail-container {
   display: flex;
   justify-content: flex-start;
-  gap: 10px; /* Küçük kartlar arasına boşluk */
+  gap: 10px;
 }
 
 .custom-thumbnail {
-  width: 100px; /* Küçük kartların genişliği */
-  height: 100px; /* Küçük kartların yüksekliği */
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  object-position: center;
   border-radius: 8px;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out; /* Yakınlaşma efekti */
+  transition: transform 0.3s ease-in-out, border 0.3s ease;
   cursor: pointer;
 }
 
 .custom-thumbnail:hover {
-  transform: scale(1.1); /* Yakınlaşma efekti */
-  border: 2px solid #007bff; /* Hover durumunda mavi çerçeve */
+  transform: scale(1.1);
+  border: 2px solid #007bff;
 }
 
 .product__info {
@@ -38,32 +51,25 @@
   line-height: 1.6;
   text-align: justify;
   max-height: 400px;
-  overflow-y: auto; /* Uzun yazılar için kaydırma ekler */
+  overflow-y: auto;
+}
+/*-------------------------------------*/
+
+/* Teknik Özellikler Başlığını Ortalamak ve Altına Çizgi Çekmek */
+.technical-features-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-/*TABLO VE ÇİZİMLER*/
-
-/* Teknik Çizimler */
-.technical-drawing {
-  max-width: 100%; /* Teknik resimlerin genişliği */
-  max-height: 150px; /* Yükseklik */
-  margin: 5px; /* Resimler arasındaki boşluk */
-  padding: 5px;
+.technical-features-line {
+  width: 100%; /* Çizginin genişliği */
+  border: 1px solid #000; /* Çizginin kalınlığı ve rengi */
+  margin: 0 auto; /* Ortalamak için */
 }
 
-.technical-drawings {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5px; /* Resimler arasında boşluk, azalmış */
-}
-
-/* Çizim konteyneri ayarları */
-.drawing-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/*TABLO*/
 
 .section-container2 {
   padding: 15px; /* İçerik ile çizgi arasındaki boşluk */
@@ -74,6 +80,7 @@
 .specification-table {
   margin-top: 1px; /* Tablo ile önceki öğe arasındaki boşluk */
   border-collapse: collapse; /* Hücre sınırlarının birleşmesini sağlar */
+  overflow-x: auto;
 }
 
 .table-title {
@@ -111,6 +118,7 @@
   border: 1px solid #ddd; /* Tablo sınırları */
   border-radius: 5px; /* Köşeleri yuvarlatmak için */
   background-color: #fff; /* Tablo arka plan rengi */
+  border-collapse: collapse;
 }
 
 .table tbody tr:nth-child(odd) {

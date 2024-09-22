@@ -84,9 +84,9 @@ const Footer = () => {
               </p>
               <div className="newsletter">
                 <input type="email" placeholder="Email" />
-                <span>
+                <a href="/contact" className="newsletter-link">
                   <i className="ri-send-plane-line"></i>
-                </span>
+                </a>
               </div>
               <h5 className="footer__link-title mt-4">
                 {footerData.social.title}

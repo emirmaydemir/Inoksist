@@ -19,6 +19,11 @@
   text-align: center;
 }
 
+.contact__info-box a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .vertical-divider {
   width: 1px;
   background-color: #ccc;

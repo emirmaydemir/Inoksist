@@ -24,24 +24,24 @@
     ],
     "socialLinks": [
       {
-        "url": "#",
-        "icon": "ri-facebook-line",
-        "display": "facebook"
-      },
-      {
-        "url": "#",
+        "url": "https://www.instagram.com/inoksistendustriyel/",
         "icon": "ri-instagram-line",
         "display": "instagram"
       },
       {
-        "url": "#",
+        "url": "https://www.linkedin.com/inoksist/",
         "icon": "ri-linkedin-line",
         "display": "linkedin"
       },
       {
-        "url": "#",
-        "icon": "ri-twitter-line",
-        "display": "twitter"
+        "url": "https://www.trendyol.com/inoksist",
+        "icon": "ri-shopping-cart-line",
+        "display": "trendyol"
+      },
+      {
+        "url": "https://maps.app.goo.gl/1Fprbr4QfXuRa9j76",
+        "icon": "ri-map-pin-line",
+        "display": "maps"
       }
     ],
     "info": {

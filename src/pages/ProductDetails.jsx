@@ -42,6 +42,22 @@ const ProductDetails = () => {
     setMainImage(imgUrl);
   };
 
+  const [zoomStyle, setZoomStyle] = useState({});
+
+  const handleMouseMove = (e) => {
+    const { left, top, width, height } = e.target.getBoundingClientRect();
+    const x = ((e.pageX - left) / width) * 100; // Mouse'un yatay konumu
+    const y = ((e.pageY - top) / height) * 100; // Mouse'un dikey konumu
+    setZoomStyle({
+      transformOrigin: `${x}% ${y}%`,
+      transform: "scale(2)", //  Resim 2 kat büyütülür (zoom yapılır).
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setZoomStyle({ transform: "scale(1)" }); // Zoom sıfırlanır (1 kat büyüklük, yani orijinal boyut). Resim tekrar normal boyutlarına döner.
+  };
+
   return (
     <Helmet title={singleProductItem.name}>
       <section>
@@ -49,14 +65,21 @@ const ProductDetails = () => {
           <Row>
             <Col lg="6" className="d-flex flex-column align-items-center">
               {/* Ana resim */}
-              <img
-                src={mainImage}
-                alt="Main Product"
-                className="w-100 main-image"
-                loading="lazy"
-              />
+              <div
+                className="main-image-container"
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
+              >
+                <img
+                  src={mainImage}
+                  alt="Main Product"
+                  className="main-image"
+                  style={zoomStyle}
+                  loading="lazy"
+                />
+              </div>
               {/* Küçük kartlar */}
-              <div className="thumbnail-container mt-3 d-flex justify-content-center">
+              <div className="thumbnail-container mt-3 d-flex justify-content-center flex-wrap">
                 {singleProductItem.images.map((imgUrl, index) => (
                   <img
                     key={index}
@@ -82,29 +105,17 @@ const ProductDetails = () => {
 
           {/* Ürün Detayları */}
           <div className="product-details-container">
-            {/* Teknik Çizimler */}
-            {singleProductItem.technicalDrawings?.length > 0 && (
-              <Row className="mt-5">
-                <Col lg="12">
-                  <div className="section-container">
-                    <div className="technical-drawings d-flex flex-wrap justify-content-center">
-                      {singleProductItem.technicalDrawings.map(
-                        (drawing, index) => (
-                          <div key={index} className="drawing-container m-2">
-                            <img
-                              src={drawing}
-                              alt={`Technical Drawing ${index + 1}`}
-                              className="technical-drawing"
-                              loading="lazy"
-                            />
-                          </div>
-                        )
-                      )}
-                    </div>
-                  </div>
-                </Col>
-              </Row>
-            )}
+            {/* Teknik Özellikler Başlığı */}
+            <Row className="mt-3">
+              <Col lg="12">
+                <div className="technical-features">
+                  <h2 className="technical-features-title">
+                    Teknik Özellikler
+                  </h2>
+                  <hr className="technical-features-line" />
+                </div>
+              </Col>
+            </Row>
 
             {/* Ürün Tabloları */}
             {singleProductItem.specifications?.length > 0 && (
@@ -126,24 +137,28 @@ const ProductDetails = () => {
                         {spec.title && (
                           <h4 className="table-title">{spec.title}</h4>
                         )}
-                        <table className="table table-bordered">
-                          <thead>
-                            <tr>
-                              {spec.headers.map((header, idx) => (
-                                <th key={idx}>{header}</th>
-                              ))}
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {spec.data.map((row, rowIndex) => (
-                              <tr key={rowIndex}>
-                                {row.map((cell, cellIndex) => (
-                                  <td key={cellIndex}>{cell}</td>
+                        <div className="table-responsive">
+                          {" "}
+                          {/* Bootstrap responsive tablo sınıfı */}
+                          <table className="table table-bordered">
+                            <thead>
+                              <tr>
+                                {spec.headers.map((header, idx) => (
+                                  <th key={idx}>{header}</th>
                                 ))}
                               </tr>
-                            ))}
-                          </tbody>
-                        </table>
+                            </thead>
+                            <tbody>
+                              {spec.data.map((row, rowIndex) => (
+                                <tr key={rowIndex}>
+                                  {row.map((cell, cellIndex) => (
+                                    <td key={cellIndex}>{cell}</td>
+                                  ))}
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
                       </div>
                     ))}
                   </div>
