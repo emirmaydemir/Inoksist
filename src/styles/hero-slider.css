@@ -65,6 +65,7 @@
 
 .slider__content {
   padding-top: 150px;
+  z-index: 10;
 }
 
 .slider__content h1 {
