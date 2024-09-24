@@ -37,7 +37,7 @@ const About = () => {
               </div>
             </Col>
 
-            <Col lg="6" md="6" sm="12">
+            <Col xl="6" lg="12" md="12" sm="12">
               <div className="about__page-content">
                 <h2 className="section__title">{aboutContent.sectionTitle}</h2>
 

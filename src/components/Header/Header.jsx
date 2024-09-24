@@ -5,6 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 import "../../styles/header.css";
 import allProducts from "../../assets/data/allProducts";
 import { useTranslation } from "react-i18next";
+import FlagButton from "../UI/FlagButton";
 
 const socialLinks = [
   {
@@ -128,21 +129,11 @@ const Header = () => {
                     <i className={item.icon}></i>
                   </a>
                 ))}
-                <button onClick={toggleLanguage} className="flag-btn">
-                  {i18n.language === "tr" ? (
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg"
-                      alt="Turkish"
-                      className="flag-icon"
-                    />
-                  ) : (
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
-                      alt="English"
-                      className="flag-icon"
-                    />
-                  )}
-                </button>
+                <FlagButton
+                  language={i18n.language}
+                  toggleLanguage={toggleLanguage}
+                  className="flag-btn"
+                />
               </div>
             </Col>
           </Row>
@@ -191,6 +182,12 @@ const Header = () => {
                     )}
                   </div>
                 ))}
+                {/* Bayrak butonu */}
+                <FlagButton
+                  language={i18n.language}
+                  toggleLanguage={toggleLanguage}
+                  className="flag-btn2"
+                />
               </div>
             </div>
 
@@ -226,6 +223,7 @@ const Header = () => {
                 </div>
               )}
             </div>
+            {/* Arama kutusu */}
           </div>
         </Container>
       </div>

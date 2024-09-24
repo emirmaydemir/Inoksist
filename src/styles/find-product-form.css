@@ -143,6 +143,10 @@
   }
 
   .hero__form {
-    bottom: -250px;
+    bottom: -230px;
+  }
+
+  .hero__slider-section {
+    margin-bottom: 1px !important;
   }
 }

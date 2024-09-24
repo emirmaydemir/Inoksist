@@ -36,6 +36,10 @@
   position: relative;
   width: fit-content;
   font-size: 17px;
+  text-align: left; /* Sola hizala */
+  display: flex; /* Eğer flex kullanıyorsan */
+  flex-direction: column; /* Dikey hizalama */
+  align-items: flex-start; /* Sola hizala */
   /* Kapsayıcı genişliğini içeriğe göre ayarlar */
 }
 
@@ -127,5 +131,29 @@
   }
   .footer__bottom p {
     font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 574px) {
+  .quick__link,
+  .office__info,
+  .footer__link-title,
+  .section__description,
+  .footer__bottom p {
+    display: flex; /* Flex kullanmaya devam et */
+    flex-direction: column; /* Dikey hizalama */
+    align-items: center; /* Elemanları ortala */
+    text-align: center;
+  }
+
+  .social-icons {
+    display: flex; /* Flex kullan */
+    justify-content: center; /* Ortala */
+    flex-direction: row; /* Yan yana diz */
+    margin-top: 1rem; /* Üstten boşluk ekle */
+  }
+
+  .social-icons a {
+    margin: 0 10px; /* İkonlar arasına boşluk ekle */
   }
 }

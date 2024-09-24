@@ -14,3 +14,9 @@
   text-decoration: none; /* Altını çizme efektini kaldırır */
   color: inherit; /* Metnin mevcut rengini korur */
 }
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .about__page-img {
+    display: none;
+  }
+}

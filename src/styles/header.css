@@ -51,6 +51,10 @@
   cursor: pointer;
 }
 
+.flag-btn2 {
+  display: none;
+}
+
 .flag-icon {
   width: 30px;
   height: 20px;
@@ -241,6 +245,15 @@
   }
   .mobile__menu {
     display: block;
+  }
+
+  .flag-btn2 {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex; /* Bayrağı esnek kutu olarak göster */
+    justify-content: center; /* Ortala */
+    margin: 1rem 0; /* Üst ve alt boşluk ekle */
   }
 
   .navigation {
