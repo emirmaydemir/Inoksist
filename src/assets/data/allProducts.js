@@ -1,15 +1,15 @@
 // data.js
-import fastenerData from "./fastenerData";
-import hardwareData from "./hardwareData";
-import chemicalData from "./chemicalData";
-import waterData from "./waterData";
+import fastenerData from "./tr/fastenerData";
+import hardwareData from "./tr/hardwareData";
+import chemicalData from "./tr/chemicalData";
+import waterData from "./tr/waterData";
 
 // Tüm ürünleri birleştir
 const allProducts = [
-  ...fastenerData,
-  ...hardwareData,
-  ...chemicalData,
-  ...waterData,
+  ...fastenerData.fastenerData,
+  ...hardwareData.hardwareData,
+  ...chemicalData.chemicalData,
+  ...waterData.waterData,
 ];
 
 export default allProducts;

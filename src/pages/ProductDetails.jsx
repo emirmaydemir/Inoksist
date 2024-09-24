@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import { useParams } from "react-router-dom";
@@ -14,10 +14,6 @@ const ProductDetails = () => {
   const singleProductItem = data.find((item) => item.name === slug);
 
   const [mainImage, setMainImage] = useState(singleProductItem.images[0]);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [singleProductItem]);
 
   const handleImageClick = (imgUrl) => {
     setMainImage(imgUrl);
