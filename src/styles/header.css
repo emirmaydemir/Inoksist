@@ -192,6 +192,7 @@
   column-gap: 2.2rem;
 }
 
+/*Navbar*/
 .nav__item {
   font-size: 1rem;
   color: #fff;
@@ -202,7 +203,7 @@
 .nav__item:hover {
   color: #f9a826;
 }
-
+/*Navbar*/
 .search__box {
   border: 1px solid #7c8a972f;
   padding: 5px 18px;

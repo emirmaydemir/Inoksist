@@ -4,15 +4,19 @@ import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import ProductItem from "../components/UI/ProductItem";
-import fastenerData from "../assets/data/fastenerData";
 import "../styles/select.css";
 import { useTranslation } from "react-i18next";
 
 //BAĞLANTI ELEMANLARI
 const FastenerListing = () => {
-  const { t } = useTranslation("categories");
-  const categoriesContent = t("fastenerData", { returnObjects: true });
-  const headerContent = t("header", { returnObjects: true });
+  const { t: tCategories } = useTranslation("categories");
+  const { t: tFastener } = useTranslation("fastenerData");
+
+  const categoriesContent = tCategories("fastenerData", {
+    returnObjects: true,
+  });
+  const headerContent = tCategories("header", { returnObjects: true });
+  const fastenerData = tFastener("fastenerData", { returnObjects: true });
   const { category } = useParams();
 
   // Kategorini Seç

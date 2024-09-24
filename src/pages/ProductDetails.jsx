@@ -1,40 +1,21 @@
 import React, { useState, useEffect } from "react";
-import fastenerData from "../assets/data/fastenerData";
-import hardwareData from "../assets/data/hardwareData";
-import chemicalData from "../assets/data/chemicalData";
-import waterData from "../assets/data/waterData";
 import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import { useParams } from "react-router-dom";
 import "../styles/product-details.css"; // Özel stilleri eklemek için bir CSS dosyası
+import { useTranslation } from "react-i18next";
 
 //ÜRÜN DETAY SAYFASI
 const ProductDetails = () => {
   const { category, slug } = useParams();
-
-  const getDataByCategory = (category) => {
-    switch (category) {
-      case "fastenerData":
-        return fastenerData;
-      case "hardwareData":
-        return hardwareData;
-      case "chemicalData":
-        return chemicalData;
-      case "waterData":
-        return waterData;
-      default:
-        return [];
-    }
-  };
-
-  const data = getDataByCategory(category);
+  const { t } = useTranslation(category);
+  const data = t(category, { returnObjects: true });
 
   const singleProductItem = data.find((item) => item.name === slug);
 
   const [mainImage, setMainImage] = useState(singleProductItem.images[0]);
 
   useEffect(() => {
-    setMainImage(singleProductItem.images[0]);
     window.scrollTo(0, 0);
   }, [singleProductItem]);
 

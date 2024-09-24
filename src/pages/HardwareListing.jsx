@@ -4,15 +4,19 @@ import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import ProductItem from "../components/UI/ProductItem";
-import hardwareData from "../assets/data/hardwareData";
 import "../styles/select.css";
 import { useTranslation } from "react-i18next";
 
 //TEKNİK HIRDAVAT
 const HardwareListing = () => {
-  const { t } = useTranslation("categories");
-  const categoriesContent = t("hardwareData", { returnObjects: true });
-  const headerContent = t("header", { returnObjects: true });
+  const { t: tCategories } = useTranslation("categories");
+  const { t: tFastener } = useTranslation("hardwareData");
+
+  const categoriesContent = tCategories("hardwareData", {
+    returnObjects: true,
+  });
+  const headerContent = tCategories("header", { returnObjects: true });
+  const hardwareData = tFastener("hardwareData", { returnObjects: true });
   const { category } = useParams();
 
   // Kategorini Seç

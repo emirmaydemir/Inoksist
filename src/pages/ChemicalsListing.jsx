@@ -4,15 +4,19 @@ import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import ProductItem from "../components/UI/ProductItem";
-import chemicalData from "../assets/data/chemicalData";
 import "../styles/select.css";
 import { useTranslation } from "react-i18next";
 
 //BAKIM KİMYASALLARI
 const ChemicalsListing = () => {
-  const { t } = useTranslation("categories");
-  const categoriesContent = t("chemicalData", { returnObjects: true });
-  const headerContent = t("header", { returnObjects: true });
+  const { t: tCategories } = useTranslation("categories");
+  const { t: tFastener } = useTranslation("chemicalData");
+
+  const categoriesContent = tCategories("chemicalData", {
+    returnObjects: true,
+  });
+  const headerContent = tCategories("header", { returnObjects: true });
+  const chemicalData = tFastener("chemicalData", { returnObjects: true });
   const { category } = useParams();
 
   // Kategorini Seç

@@ -4,15 +4,19 @@ import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import ProductItem from "../components/UI/ProductItem";
-import waterData from "../assets/data/waterData";
 import "../styles/select.css";
 import { useTranslation } from "react-i18next";
 
 //MODÜLER SU DEPOSU
 const WaterTankListing = () => {
-  const { t } = useTranslation("categories");
-  const categoriesContent = t("waterTankData", { returnObjects: true });
-  const headerContent = t("header", { returnObjects: true });
+  const { t: tCategories } = useTranslation("categories");
+  const { t: tFastener } = useTranslation("waterData");
+
+  const categoriesContent = tCategories("waterData", {
+    returnObjects: true,
+  });
+  const headerContent = tCategories("header", { returnObjects: true });
+  const waterData = tFastener("waterData", { returnObjects: true });
   const { category } = useParams();
 
   // Kategorini Seç

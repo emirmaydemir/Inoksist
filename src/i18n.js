@@ -24,6 +24,14 @@ import priceEn from "./assets/data/en/price";
 import priceTr from "./assets/data/tr/price";
 import contactEn from "./assets/data/en/contact";
 import contactTr from "./assets/data/tr/contact";
+import fastenerDataEn from "./assets/data/en/fastenerData";
+import fastenerDataTr from "./assets/data/tr/fastenerData";
+import hardwareDataEn from "./assets/data/en/hardwareData";
+import hardwareDataTr from "./assets/data/tr/hardwareData";
+import chemicalDataEn from "./assets/data/en/chemicalData";
+import chemicalDataTr from "./assets/data/tr/chemicalData";
+import waterDataEn from "./assets/data/en/waterData";
+import waterDataTr from "./assets/data/tr/waterData";
 
 const resources = {
   tr: {
@@ -38,6 +46,10 @@ const resources = {
     categories: categoriesTr,
     price: priceTr,
     contact: contactTr,
+    fastenerData: fastenerDataTr,
+    hardwareData: hardwareDataTr,
+    chemicalData: chemicalDataTr,
+    waterData: waterDataTr,
   },
   en: {
     slider: sliderEn,
@@ -51,6 +63,10 @@ const resources = {
     categories: categoriesEn,
     price: priceEn,
     contact: contactEn,
+    fastenerData: fastenerDataEn,
+    hardwareData: hardwareDataEn,
+    chemicalData: chemicalDataEn,
+    waterData: waterDataEn,
   },
 };
 
@@ -71,6 +87,10 @@ i18n
       "categories",
       "price",
       "contact",
+      "fastenerData",
+      "hardwareData",
+      "chemicalData",
+      "waterData",
     ], // Kullanılacak isim alanları
     defaultNS: "footer", // Varsayılan isim alanı
     interpolation: {

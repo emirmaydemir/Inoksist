@@ -73,7 +73,7 @@
       "description": "Bakım Kimyasalları"
     }
   ],
-  "waterTankData": [
+  "waterData": [
     {
       "id": 1,
       "description": "Modüler Su Deposu"
