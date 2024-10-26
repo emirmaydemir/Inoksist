@@ -51,21 +51,6 @@ const Home = () => {
           </Row>
         </Container>
       </section>
-      {/* =========== car offer section ============= */}
-      {/*<section>
-        <Container>
-          <Row>
-            <Col lg="12" className="text-center mb-5">
-              <h6 className="section__subtitle">Come with</h6>
-              <h2 className="section__title">Hot Offers</h2>
-            </Col>
-
-            {carData.slice(0, 6).map((item) => (
-              <ProductItem item={item} key={item.id} />
-            ))}
-          </Row>
-        </Container>
-      </section>*/}
       {/* =========== become a driver section ============ */}
       <TrendyolSection />
 
